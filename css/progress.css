@@ -1,0 +1,147 @@
+
+.main__section--progress{
+    position: relative;
+   min-height: 75vh;
+
+    /* height: 75vh; */
+    /* min-height: 75vh; */
+
+    background-color: transparent;
+}
+.main__section--progress::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform-origin: bottom right;
+    transform: translate(-2%,-100%)rotate(-2.5deg) ;
+
+    width: 110%;
+    height: var(--skewHeight);
+    /* min-height: 40px; */
+    background-color: white;
+}
+.main__section--progress::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform-origin: bottom left;
+    transform: translate(2%,100%)rotate(-2.5deg) ;
+
+    width: 110%;
+    height: var(--skewHeight);
+    /* min-height: 40px; */
+    background-color: var(--gray);
+
+}
+.progress{
+    height: 100%;
+    width: 100%;
+
+    margin-top: 15px;
+    /* flex C */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+  
+}
+.progress__technology{
+    height: 100%;
+
+    margin-bottom: 15px;
+
+     /* flex C */
+     display: flex;
+     flex-direction: column;
+     justify-content:center;
+     align-items: center;
+
+}
+.progress__circle{
+      /* width: 13.5%; */
+      position: relative;
+      box-sizing: border-box;
+      width: calc(75vh * .31);
+      min-width: calc(var(--sectionMinHeight) * .31);
+      height: calc(75vh * .31);
+      min-height: calc(var(--sectionMinHeight) * .31);
+
+      border-radius: 50%;
+      /* background-color: var(--greenDark); */
+      background-color: transparent;
+      border: calc(75vh * .31 * .075) solid var(--orange); 
+
+
+      font-size: 2.3em;
+      font-weight: 800;
+      color: white;
+
+      /* margin-top: 28%; */
+
+
+    /* border-top: none;
+    border-left: none; */
+
+       /* flex C */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.progress__technology:hover  .pointer{
+    transform: translateY(0)  rotate(-30deg);
+}
+.pointer{
+    position: absolute;
+    top: 0em;
+
+    left: 100%;
+    height: auto;
+    font-size: 1em;
+    color: var(--orange);
+    transform: translateY(50%) rotate(-30deg);
+
+    transition: .2s linear;
+}
+.progress__label{
+    position: relative;
+
+    color: white;
+    margin-top: 15%;
+
+    /* margin-bottom: 27%; */
+    font-size: 1.4em;
+    letter-spacing: .15em;
+
+}
+/*   <!-- progress section                                                                   -->
+                <section class="progress">
+                    <!-- circle progress bar section 1-->
+                    <section class="progress__technology">
+                        <div class="progress__circle">33%</div>
+                        <span class="progress__label">HTML/CSS</span>
+                    </section>
+
+                    <!-- circle progress bar section 2-->
+                    <section class="progress__technology">
+                        <div class="progress__circle">33%</div>
+                        <span class="progress__label">JS</span>
+                    </section>
+
+                    <!-- circle progress bar section 3-->
+                    <section class="progress__technology">
+                        <div class="progress__circle">33%</div>
+                        <span class="progress__label">React</span>
+                    </section>
+
+                    <!-- circle progress bar section 3-->
+                    <section class="progress__technology">
+                        <div class="progress__circle">33%</div>
+                        <span class="progress__label">Node</span>
+                    </section>
+                    <!-- progress section END */

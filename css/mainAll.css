@@ -1,0 +1,31 @@
+.main{
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main__section{
+    width: 100%;
+    min-height: calc(var(--sectionMinHeight) * 1);
+    background-color: #fff;
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.main__wrapper{
+    height: 100%;
+
+    width: 90%;
+     /* flex C */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}

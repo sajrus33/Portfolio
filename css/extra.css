@@ -1,0 +1,311 @@
+/* toggle classes */
+.displayNone{
+    display: none;
+}
+
+@keyframes goInRight{
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+
+  @media only screen and (max-width: 3000px)and (orientation: landscape){
+    :root{
+      --sectionMinHeight: 480px;
+      --portfolioMinHeight: 320px;
+      --wrapperWidth: 90%;
+      --navWidth: 50%;
+  
+  
+      --aboutLineLeft: 50%;
+  
+      --noteAfterSize: 25px;
+      /* --noteWidth: 45%; */
+      /* 100 */
+      /* 45 */
+  }
+    body {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 3000px) and (orientation: portrait){
+
+
+      :root{
+        --wrapperSize : 80%;
+        --sectionMinHeight: 320px;
+        --wrapperWidth: 90%;
+        --navWidth: 50%;
+  
+        --aboutLineLeft: 90%;
+    
+        --noteAfterSize: 25px;
+        --noteWidth: 100%;
+        /* 100 */
+        --noteHeight:calc(45% * .6);
+        /* 45 */
+        --describeOrder: 1;
+        --noteOrder: 2;
+        --noteBeforeLeft: 100%;
+    
+        --projectWidthBig: 36%;
+        --projectWidthSmall: 25%;
+    
+        --projectWidth: 44%;
+        --projectWidth2: 48%;
+        --projectWidth3:59%;
+    
+        --projectWidth4: 52%;
+        --projectWidth5: 48%;
+        --projectWidth6: 37%;
+    
+    
+
+
+
+
+        --projectHeight: var(--projectWidthBig);
+        --projectHeight2: var(--projectWidthBig);
+        --projectHeight3:var(--projectWidthSmall);
+    
+        --projectHeight4: var(--projectWidthBig);
+        --projectHeight5: var(--projectWidthBig);
+        --projectHeight6: var(--projectWidthSmall);
+
+        --projectOrder: 1;
+        --projectOrder2: 3;
+        --projectOrder3: 5;
+        --projectOrder4: 2;
+        --projectOrder5: 4;
+        --projectOrder6: 6;
+
+        --projectSelf5: flex-start;
+
+
+        --projectMargin: 0;
+
+        /* --projectWidthBig: 36%;
+        --projectWidthSmall: 25%;
+
+        --projectWidth: var(--projectWidthBig);
+        --projectWidth2: var(--projectWidthBig);
+        --projectWidth3: var(--projectWidthSmall);
+
+        --projectWidth4: var(--projectWidthBig);
+        --projectWidth5: var(--projectWidthBig);
+        --projectWidth6: var(--projectWidthSmall);
+
+
+        --projectHeight: 44%;
+        --projectHeight2: 48%;
+        --projectHeight3: 59%;
+
+        --projectHeight4: 52%;
+        --projectHeight5: 48%;
+        --projectHeight6: 37%; */
+    } 
+    body {
+      font-size: 23px;
+    }
+    .footer__wrapper{
+      width: 100%;
+      /* flex C */
+      /* flex-direction: column; */
+  }
+  }
+
+  @media only screen and (max-width: 1666px)and (orientation: landscape){
+    :root{
+      --wrapperSize : 80%;
+      --sectionMinHeight: 320px;
+
+    }
+    body {
+      font-size: 18px;
+    }
+  }
+
+  
+
+
+  @media only screen and (max-width: 1366px)and (orientation: landscape){
+    :root{
+      --wrapperSize : 80%;
+      --sectionMinHeight: 320px;
+
+    }
+    body {
+      font-size: 17px;
+    }
+  }
+  @media only screen and (max-width: 1366px) and (orientation: portrait){
+    :root{
+      --sectionMinHeight: 320px;
+      --wrapperWidth: 90%;
+      /* --navWidth: 100%; */
+  
+  }
+  body {
+    font-size: 18px;
+
+  }
+ 
+    .main__wrapper--lightWood{
+      height: 50vh;
+    }
+    .main__product{
+      height: 50vh;
+    }
+   
+  }
+
+ 
+
+
+  @media only screen and (max-width: 1080px)and (orientation: landscape){
+    :root{
+    --navWidth: 50%;
+      --wrapperSize : 80%;
+      --sectionMinHeight: 320px;
+
+    }
+    body {
+      font-size: 13px;
+
+    }
+
+    .nav__list{
+      display:none;
+    }
+    
+  }
+  @media only screen and (max-width: 1080px)and (orientation: portrait){
+    :root{
+      --wrapperSize : 80%;
+    }
+    body {
+      font-size: 17px;
+
+    }
+    .nav__list{
+      display:none;
+    }
+    
+  }
+  /* @media only screen and (max-width: 1000px) and (orientation: portrait){
+    :root{
+
+    }
+  } */
+
+
+
+ @media only screen and (max-width: 872px) and (orientation: landscape){
+  :root{
+    --wrapperWidth: 90%;
+
+}
+.nav__list{
+  display:none;
+}
+  
+    body {
+      font-size: 10px;
+
+    }
+    .header__nav--menu{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 872px) and (orientation: portrait){
+    :root{
+      --wrapperSize : 80%;
+
+    }
+    body {
+      font-size:13.5px;
+
+    }
+    .header__nav--menu{
+      display: none;
+    }
+    .nav__list{
+      display:none;
+    }
+  }
+
+
+
+
+  @media only screen and (max-width: 640px) {
+    :root{
+      --wrapperSize : 80%;
+    --noteBeforeSize: 12.5px;
+
+    }
+    body {
+      font-size: 9px;
+
+    }
+  }
+  @media only screen and (max-width: 640px) and (orientation: portrait){
+    body {
+      font-size: 12px;
+    }
+    .skills{
+      height: 50vh;
+    }
+  }
+
+
+
+
+  @media only screen and (max-width: 480px) {
+    :root{
+      --wrapperSize : 90%;
+      
+    }
+    body {
+      font-size: 10px;
+    }
+    .about__note{
+      font-weight: 700;
+    }
+   
+  }
+  @media only screen and (max-width: 480px) and (orientation: portrait){
+    body {
+      font-size: 11px;
+    }
+   
+  }
+
+
+
+
+  @media only screen and (max-width: 320px)and (orientation: landscape) {
+    :root{
+      --wrapperSize : 95%;
+    }
+    body {
+      font-size: 9.5px;
+    }
+  
+  }
+  @media only screen and (max-width: 321px)and (orientation: portrait) {
+    :root{
+      --wrapperSize : 95%;
+    }
+    body {
+      font-size: 9.5px;
+    }
+  
+  }
+  /* @media only screen and (max-width: 320px) and (orientation: portrait){
+    :root{
+
+    }
+
+  } */

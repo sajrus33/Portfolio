@@ -1,0 +1,242 @@
+.header{
+    position: relative;
+    height: 100vh;
+    min-height: calc(var(--sectionMinHeight) * 1);
+
+    /* background-image: url("../img/header.png");
+
+     */
+     background-color: transparent;
+    background-size: cover;
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+ 
+
+}
+
+.header::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform-origin: bottom left;
+    transform: translate(0%,100%)rotate(-2.5deg) ;
+
+    width: 110%;
+    height: var(--skewHeight);
+    /* min-height: 40px; */
+    background-color: var(--gray);
+}
+
+.nav{
+    position: relative;
+    width: var(--wrapperWidth);
+    height: 15%;
+    /* flex C */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+.logo{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:0;
+    width: 20px;
+    height: 50px;
+}
+.logo::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 105%;
+    height: 75%;
+
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: translate(2px,-2px);
+
+}
+.logo::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 105%;
+    height: 75%;
+
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: translate(-2px,2px);
+
+}
+
+.nav__list{
+    width: var(--navWidth);
+   
+       /* flex C */
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+}
+.nav__link{
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: 400;
+
+}
+/* } <header class="header">
+        <!-- navigation -->
+        <div class="logo"></div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <a href="#">
+                    <li class="nav__link">About Me</li>
+                </a>
+                <a href="#">
+                    <li class="nav__link">My Education</li>
+                </a>
+                <a href="#">
+                    <li class="nav__link">My Skills</li>
+                </a>
+                <a href="#">
+                    <li class="nav__link">My Portfollio</li>
+                </a>
+                <a href="#">
+                    <li class="nav__link">Contact Me</li>
+                </a>
+            </ul>
+        </nav>
+        <!-- header section-->
+        <section class="header__section">
+            <img src="" alt="Author image" class="header__img">
+            <h1 class="header__h1">Brian Wala</h1>
+            <span class="header__specialization">Frontend Developer</span>
+            <button class="header__button">Hire me!</button>
+        </section>
+    </header> */
+    .header__section{
+        
+        position: relative;
+        min-height: 50%;
+        width: var(--portfolioMinHeight);
+        /* flex C */
+        display: flex;
+        flex-direction: column;
+        /* background-color: #fff; */
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .header__img{
+        display: block;
+        position: relative;
+        width: 40%;
+        height: auto;
+        filter: grayscale(66%);
+    }
+    .header__img::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+        width: 55%;
+        height: 75%;
+
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        transform: translate(3px,-3px);
+   
+    }
+    .header__img::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    
+        width: 55%;
+        height: 75%;
+
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: translate(-3px,3px);
+   
+    }
+
+    .header__h1{
+        font-size: 3em;
+        letter-spacing: .05em;
+        color: white;
+        font-weight: 600;
+
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        margin-top: 30px;
+    }
+    .header__specialization{
+        font-size: 1.7em;
+        color: white;
+        font-weight: 400;
+
+        white-space: nowrap;
+
+        margin-top: 10px;
+
+    }
+    .header__button{
+        position: relative;
+        width: 90%;
+        padding: 5%;
+        background-color: transparent;
+        border: white solid 2px;
+        font-size: 1.2em;
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+
+        margin-top: 20px;
+        overflow: hidden;
+
+        /* z-index: 2; */
+
+    }
+    .header__button:hover{
+        color: black;
+        color: rgba(255,255,255,.5);
+        
+    }
+    .header__button::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top:0;
+        background-color: #fff;
+        transform: translateX(-100%); 
+        transition: .2s linear;
+
+        z-index: -1;
+
+        height: 100%;
+        width:100%;
+    }
+
+    .header__button:hover:after{
+        transform: translateX(0);
+        
+    }

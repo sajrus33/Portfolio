@@ -1,0 +1,142 @@
+.main__section--projects{
+    background-color: var(--gray);
+    z-index: 1;
+}
+.projects{
+    min-height: 135vh;
+    height: 135vh;
+    
+
+}
+
+.projects__filters{
+    width: 100%;
+    height: 1.5%;
+    margin-bottom: 7.5%;
+    /* background-color: red; */
+    /* flex C */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects__filter{
+    /* background-color: blue; */
+    height: 100%;
+    margin-left: 1.5%;
+    letter-spacing: .15em;
+}
+.projects__link{
+    color: inherit;
+}
+
+.projects__album{
+    position: relative;
+    height: 60%;
+    width: 100%;
+    /* background-color: red; */
+
+    /* flex C */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+.projects__project{
+    overflow: hidden;
+    /* overflow-x: scroll; */
+
+}
+.projects__project--first{
+    height: var(--projectHeight);
+    width: var(--projectWidth);
+    /* background-color: blue; */
+    align-self: flex-start;
+
+    order: var(--projectOrder);
+    
+}
+.projects__project--second{
+    height: var(--projectHeight2);
+    
+    width: var(--projectWidth2);
+    /* background-color: green; */
+    align-self: flex-start;
+
+    order: var(--projectOrder2);
+
+
+}
+.projects__project--thirt{
+    height: var(--projectHeight3);
+    width: var(--projectWidth3);
+    /* background-color: yellow; */
+    align-self: flex-end;
+
+    order: var(--projectOrder3);
+
+
+    
+}
+.projects__project--fourth{
+    height: var(--projectHeight4);
+    width: var(--projectWidth4);
+    /* background-color: purple; */
+    align-self: flex-start;
+    transform: translateY(var(--projectMargin));
+
+    order: var(--projectOrder4);
+
+
+}
+.projects__project--fifth{
+    height: var(--projectHeight5);
+    width: var(--projectWidth5);
+    /* background-color: black; */
+    align-self: var(--projectSelf5);
+    transform: translateY(var(--projectMargin));
+
+    order: var(--projectOrder5);
+
+    
+}
+.projects__project--sixth{
+    height:var(--projectHeight6);
+    width: var(--projectWidth6);
+    /* background-color: black; */
+    align-self: flex-end;
+    transform: translateY(var(--projectMargin));
+  
+    order: var(--projectOrder6);
+}
+.project__iframe{
+
+    width: 100%;
+    min-width: 540px;
+    height: 100%;
+    min-height: 320px;
+
+    /* overflow: scroll; */
+}
+/*    <section class="main__section main__section--projects">
+rojects__project--first"></article>
+                    <article class="projects__project projects__project--second"></article>
+                    <article class="projects__project projects__project--thirt"></article>
+                    <article class="projects__project projects__project--fourth"></article>
+                    <article class="projects__project projects__project--fifth"></arti
+            <!-- wrapper 90% of width                                                               -->
+            <section class="main__wrapper">  106 77
+                <!-- projects section                                                                   -->
+                <section class="projects">
+                    <!-- filters -->
+                    <section class="projects__filters">
+                        <span class="projects__filter">All</span>
+                        <span class="projects__filter">HTML/CSS</span>
+                        <span class="projects__filter">JS</span>
+                        <span class="projects__filter">React</span>
+                        <span class="projects__filter">Node</span>
+                    </section>
+                    <!-- project collection -->
+                    <section class="projects__album">
+                                                                      -->
+                </section> */
