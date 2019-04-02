@@ -1347,3 +1347,9 @@ body{
     }
   
   }
+  /* @media only screen and (max-width: 320px) and (orientation: portrait){
+    :root{
+
+    }
+
+  } */
