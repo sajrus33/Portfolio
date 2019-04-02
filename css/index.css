@@ -191,7 +191,7 @@ body{
     position: relative;
     height: 100vh;
     min-height: calc(var(--sectionMinHeight) * 1);
-x
+
      background-color: transparent;
     background-size: cover;
     /* flex C */
