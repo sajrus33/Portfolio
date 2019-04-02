@@ -1,13 +1,14 @@
 
 function init() {
+    const myLink = {
+
+    }
     const myDOM = {
-        link: [
-            about = document.querySelector(".nav__link--about"),
-            skills = document.querySelector(".nav__link--skills"),
-            progress = document.querySelector(".nav__link--progress"),
-            projects = document.querySelector(".nav__link--projects"),
-            footer = document.querySelector(".nav__link--footer"),
-        ],
+        link: [...document.querySelectorAll(".nav__link")],
+        iframes: {
+            check: [...document.querySelectorAll(".project__check")],
+            code: [...document.querySelectorAll(".project__code")],
+        },
         // listen: function () {
         //     myDOM.link["about"] = document.querySelector(".nav__link--about");
         //     myDOM.link["skills"] = document.querySelector(".nav__link--skills");
@@ -68,7 +69,10 @@ function init() {
 
 
     };
+
     function listen() {
+
+
         myDOM.link.forEach(link => {
             const targetName = link.classList.value.slice(21, link.classList.value.length)
             console.log(targetName);
@@ -84,6 +88,28 @@ function init() {
             const scrollTime = Math.abs(window.pageYOffset / 3);
 
             myDOM.scrollTo(myDOM.header, scrollTime);
+        });
+
+        myDOM.iframes.code.forEach(iframe => {
+            iframe.addEventListener("click", function () {
+                const url = this.previousElementSibling.getAttribute("data-code");
+                console.log(url);
+
+                window.open(url);
+            });
+
+        });
+        myDOM.iframes.check.forEach(iframe => {
+            iframe.addEventListener("click", function () {
+                const url = this.previousElementSibling.previousElementSibling.getAttribute("src");
+
+                console.log(url);
+                window.open(url);
+            });
+            // iframe.addEventListener("click", function () {
+            //     console.log("ye");
+            //     // window.open()
+            // });
         });
     }
     listen();

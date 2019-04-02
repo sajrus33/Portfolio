@@ -804,121 +804,212 @@ body{
 
 }
 .main__section--projects{
-    background-color: var(--gray);
-    z-index: 1;
+  background-color: var(--gray);
+  z-index: 1;
 }
 .projects{
-    min-height: 135vh;
-    height: 135vh;
-    
+  min-height: 135vh;
+  height: 135vh;
+  
 
 }
 
 .projects__filters{
-    width: 100%;
-    height: 1.5%;
-    margin-bottom: 7.5%;
-    /* background-color: red; */
-    /* flex C */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 1.5%;
+  margin-bottom: 7.5%;
+  /* background-color: red; */
+  /* flex C */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects__filter{
-    /* background-color: blue; */
-    height: 100%;
-    margin-left: 1.5%;
-    letter-spacing: .15em;
+  /* background-color: blue; */
+  height: 100%;
+  margin-left: 1.5%;
+  letter-spacing: .15em;
 }
 .projects__link{
-    color: inherit;
+  color: inherit;
 }
 
 .projects__album{
-    position: relative;
-    height: 60%;
-    width: 100%;
-    /* background-color: red; */
+  position: relative;
+  height: 60%;
+  width: 100%;
+  /* background-color: red; */
 
-    /* flex C */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+  /* flex C */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
 
 }
 .projects__project{
-    overflow: hidden;
-    /* overflow-x: scroll; */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* overflow-x: scroll; */
+  /* z-index: 2; */
 
 }
 .projects__project--first{
-    height: var(--projectHeight);
-    width: var(--projectWidth);
-    /* background-color: blue; */
-    align-self: flex-start;
+  height: var(--projectHeight);
+  width: var(--projectWidth);
+  /* background-color: blue; */
+  align-self: flex-start;
 
-    order: var(--projectOrder);
-    
+  order: var(--projectOrder);
+  
 }
 .projects__project--second{
-    height: var(--projectHeight2);
-    
-    width: var(--projectWidth2);
-    /* background-color: green; */
-    align-self: flex-start;
+  height: var(--projectHeight2);
+  
+  width: var(--projectWidth2);
+  /* background-color: green; */
+  align-self: flex-start;
 
-    order: var(--projectOrder2);
+  order: var(--projectOrder2);
 
 
 }
 .projects__project--thirt{
-    height: var(--projectHeight3);
-    width: var(--projectWidth3);
-    /* background-color: yellow; */
-    align-self: flex-end;
+  height: var(--projectHeight3);
+  width: var(--projectWidth3);
+  /* background-color: yellow; */
+  align-self: flex-end;
 
-    order: var(--projectOrder3);
+  order: var(--projectOrder3);
 
 
-    
+  
 }
 .projects__project--fourth{
-    height: var(--projectHeight4);
-    width: var(--projectWidth4);
-    align-self: flex-start;
-    transform: translateY(var(--projectMargin));
+  height: var(--projectHeight4);
+  width: var(--projectWidth4);
+  /* background-color: purple; */
+  align-self: flex-start;
+  transform: translateY(var(--projectMargin));
 
-    order: var(--projectOrder4);
+  order: var(--projectOrder4);
 
 
 }
 .projects__project--fifth{
-    height: var(--projectHeight5);
-    width: var(--projectWidth5);
-    align-self: var(--projectSelf5);
-    transform: translateY(var(--projectMargin));
+  height: var(--projectHeight5);
+  width: var(--projectWidth5);
+  /* background-color: black; */
+  align-self: var(--projectSelf5);
+  transform: translateY(var(--projectMargin));
 
-    order: var(--projectOrder5);
+  order: var(--projectOrder5);
 
-    
+  
 }
 .projects__project--sixth{
-    height:var(--projectHeight6);
-    width: var(--projectWidth6);
-    align-self: flex-end;
-    transform: translateY(var(--projectMargin));
-  
-    order: var(--projectOrder6);
+  height:var(--projectHeight6);
+  width: var(--projectWidth6);
+  /* background-color: black; */
+  align-self: flex-end;
+  transform: translateY(var(--projectMargin));
+
+  order: var(--projectOrder6);
 }
 .project__iframe{
 
-    width: 100%;
-    min-width: 540px;
-    height: 100%;
-    min-height: 320px;
+  width: 100%;
+  min-width: 640px;
+  height: 100%;
+  min-height: 320px;
+  /* transform: scale(1.5); */
+  /* overflow: scroll; */
+  transition: .2s linear;
+  z-index: 1;
+  cursor: pointer;
+  pointer-events: none;
+}
+.projects__project:hover .project__iframe{
+  /* min-width: 1024px;
+  min-height: 720px; */
+  transform: scale(1.1);
 
 }
+.projects__project:hover  .project__code,.project__code:hover{
+  /* min-width: 1024px;
+  min-height: 720px; */
+  transform: translate(-50%,5px);
+  
+
+}
+.projects__project:hover  .project__check,.project__check:hover{
+  /* min-width: 1024px;
+  min-height: 720px; */
+  transform: translate(-50%,-5px);
+  
+
+}
+/* .project__iframe:hover .project__iframe:nth-child(2){
+  visibility: visible;
+
+} */
+.project__code{
+  z-index: 2;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  min-width: 50px;
+  min-height: 50px;
+  padding:5px 5px;
+  border-radius: 50%;
+  /* background-color: #fff; */
+  font-size: 1.5em;
+  color: var(--gray);
+  background-color: rgba(0,0,0,.9);
+  /* flex C */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .3s;
+}
+.project__check{
+  z-index: 2;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%,100%);
+  min-width: 50px;
+  min-height: 50px;
+  padding:5px 5px;
+  border-radius: 50%;
+  /* background-color: #fff; */
+  font-size: 1.5em;
+  color: var(--gray);
+  background-color: rgba(0,0,0,.9);
+  /* flex C */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .3s;
+}
+.project__ico{
+  pointer-events: none;
+
+}
+.project__ico--check{
+
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+            
 .main__section--footer{
     position: relative;
     min-height: 100vh;
@@ -982,7 +1073,7 @@ body{
     font-weight: 800;
     margin-bottom: 5px;
 }
-.footer__specialization{}
+
 
 .footer__mailer{
     height: 72%;
