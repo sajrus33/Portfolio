@@ -108,10 +108,7 @@ body{
   ::-webkit-scrollbar-thumb {
     background-color: #000;
   }
-   
-  /* ::-webkit-scrollbar-thumb:hover {
-    background-color: transparent;
-  } */
+
 
   @keyframes fadeIn{
  0%{
@@ -147,8 +144,7 @@ body{
     right: 10px;
     bottom: 10px;
     background-color: rgba(255,255,255,.82);
-    /* border: 3px white solid; */
-    /* border-radius: 15px; */
+
     z-index: 3;
 }
 .arrow::after{
@@ -195,10 +191,7 @@ body{
     position: relative;
     height: 100vh;
     min-height: calc(var(--sectionMinHeight) * 1);
-
-    /* background-image: url("../img/header.png");
-
-     */
+x
      background-color: transparent;
     background-size: cover;
     /* flex C */
