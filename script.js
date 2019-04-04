@@ -1,21 +1,17 @@
-
-function init() {
-    const myLink = {
-
+window.onload = app;
+function app() {
+    const mySetUp = {
+        // for ".project__iframe" || for myDOM.iframes.srcs
+        iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     }
     const myDOM = {
         link: [...document.querySelectorAll(".nav__link")],
         iframes: {
+            srcs: mySetUp.iframesSrcs,
+            iframes: [...document.querySelectorAll(".project__iframe")],
             check: [...document.querySelectorAll(".project__check")],
             code: [...document.querySelectorAll(".project__code")],
         },
-        // listen: function () {
-        //     myDOM.link["about"] = document.querySelector(".nav__link--about");
-        //     myDOM.link["skills"] = document.querySelector(".nav__link--skills");
-        //     myDOM.link["progress"] = document.querySelector(".nav__link--progress");
-        //     myDOM.link["projects"] = document.querySelector(".nav__link--projects");
-        //     myDOM.link["footer"] = document.querySelector(".nav__link--footer");
-        // },
 
         header: document.querySelector(".header"),
         about: document.querySelector(".main__section--about"),
@@ -27,7 +23,13 @@ function init() {
         paralax: document.querySelector(".paralax"),
         arrow: document.querySelector(".arrow"),
 
+        setUpSrcs: function () {
+            myDOM.iframes.iframes.forEach((iframe, i) => {
+                iframe.src = myDOM.iframes.srcs[i];
+                console.log(iframe.src);
 
+            });
+        },
 
 
         scrollTo: function (target = myDOM.footer, duration = 200) {
@@ -70,9 +72,9 @@ function init() {
 
     };
 
-    function listen() {
+    function init() {
 
-
+        // Event listeners init
         myDOM.link.forEach(link => {
             const targetName = link.classList.value.slice(21, link.classList.value.length)
             console.log(targetName);
@@ -94,7 +96,6 @@ function init() {
             iframe.addEventListener("click", function () {
                 const url = this.previousElementSibling.getAttribute("data-code");
                 console.log(url);
-
                 window.open(url);
             });
 
@@ -102,26 +103,16 @@ function init() {
         myDOM.iframes.check.forEach(iframe => {
             iframe.addEventListener("click", function () {
                 const url = this.previousElementSibling.previousElementSibling.getAttribute("src");
-
                 console.log(url);
                 window.open(url);
             });
-            // iframe.addEventListener("click", function () {
-            //     console.log("ye");
-            //     // window.open()
-            // });
         });
+
+        // slow !!!!!!!!!!!
+
     }
-    listen();
-    // myDOM.link.about.addEventListener("click", function () {
-    //     const targetName = this.classList.value.slice(21, this.classList.value.length)
-    //     console.log(targetName);
-    //     console.log("click works", myDOM[targetName]);
-    // });
-
-    // let mySize = {
-
-    // }
+    init();
+    myDOM.setUpSrcs();
 
 
 
@@ -130,7 +121,6 @@ function init() {
 
 }
 
-window.onload = init;
 
 // window.addEventListener("resize", function () {
 //     console.log("header.offSetBottom");
