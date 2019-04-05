@@ -12,7 +12,6 @@
     <!-- variables, body -->
     <link rel="stylesheet" href="css/index.css">
 
-
 </head>
 
 <body>
@@ -42,23 +41,31 @@
                     <li class="nav__link nav__link--footer">Contact Me</li>
                 </a>
             </ul>
-            <ul class="ham__list hide">
-                <a href="#">
-                    <li class="ham__link ham__link--about">About Me</li>
-                </a>
-                <a href="#">
-                    <li class="ham__link ham__link--skills">My Education</li>
-                </a>
-                <a href="#">
-                    <li class="ham__link nav__link--progress">My Skills</li>
-                </a>
-                <a href="#">
-                    <li class="ham__link ham__link--projects">My Portfollio</li>
-                </a>
-                <a href="#">
-                    <li class="ham__link ham__link--footer">Contact Me</li>
-                </a>
-            </ul>
+            <nav class="nav--ham">
+                <div class="ham">
+                    <span class="ham__bar ham__bar--first"></span>
+                    <span class="ham__bar ham__bar--second"></span>
+                    <span class="ham__bar ham__bar--thirt"></span>
+                </div>
+                <ul class="ham__list">
+                    <a class="ham__a" href="#">
+                        <li class="ham__link ham__link--about">About Me</li>
+                    </a>
+                    <a class="ham__a" href="#">
+                        <li class="ham__link ham__link--skills">My Education</li>
+                    </a>
+                    <a class="ham__a" href="#">
+                        <li class="ham__link nav__link--progress">My Skills</li>
+                    </a>
+                    <a class="ham__a" href="#">
+                        <li class="ham__link ham__link--projects">My Portfollio</li>
+                    </a>
+                    <a class="ham__a" href="#">
+                        <li class="ham__link ham__link--footer">Contact Me</li>
+                    </a>
+                </ul>
+            </nav>
+
         </nav>
         <!-- header section-->
         <section class="header__section">
@@ -155,6 +162,7 @@
 
                     <!-- skill 1 -->
                     <section class="skill">
+                        <div id="progress"> </div>
                         <div class="skill__img">
                             <img src="img/degree1.png" alt="First degree" class="img">
                         </div>
@@ -324,8 +332,10 @@
     <footer class="main__section main__section--footer">
         <!-- wrapper 90% of width                                                               -->
         <section class="main__wrapper footer">
+
             <section class="footer__contact">
                 <address class="footer__adress">
+
                     <section class="footer__wrapper footer__wrapper--me">
                         <div class="footer__img">
                             <img src="img/me.jpg" alt="Author image" class="img">
@@ -335,26 +345,26 @@
                             <span class="footer__specialization">Frontend Developer</span>
                         </div>
                     </section>
-                    <span class="footer__number">+48 662-212-779</span>
-                    <span class="footer__email">brianwala22@gmail.com</span>
+
+                    <div class="footer__myNumber">+48 662-212-779</div>
+                    <div class="footer__myEmail">brianwala22@gmail.com</div>
 
                     <button class="footer__button">Codepen</button>
                     <section class="footer__wrapper footer__wrapper--media">
                         <div class="footer__media footer__media--fb"></div>
-                        <div class="footer__media footer__media--tweeter"></div>
                         <div class="footer__media footer__media--github"></div>
                         <div class="footer__media footer__media--code"></div>
                         <div class="footer__media footer__media--google"></div>
                     </section>
-
                 </address>
             </section>
+
             <section class="footer__mailer">
                 <input placeholder="Full Name" type="text" class="footer__input footer__name">
                 <input placeholder="Email" type="text" class="footer__input footer__email">
                 <input placeholder="Number" type="text" class="footer__input footer__number">
                 <input placeholder="Write your Message here..." type="text" class="footer__input footer__message">
-                <input value="SUBMIT" ype="submit" class="footer__input footer__submit">
+                <input value="SUBMIT" type="submit" class="footer__input footer__submit">
             </section>
         </section>
 
