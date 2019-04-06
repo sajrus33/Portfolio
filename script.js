@@ -7,15 +7,15 @@ function app() {
     }
     const mySetUp = {
         speed: [
-            75 * 3,
-            49 * 3,
-            5 * 3,
-            20 * 3
+            75 * 2,
+            55 * 2,
+            10 * 2,
+            20 * 2
         ],
         progress: [
             .75,
-            .49,
-            .05,
+            .55,
+            .10,
             .20
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
