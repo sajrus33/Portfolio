@@ -61,7 +61,7 @@ function app() {
 
         createProgressCircles: function () {
             myDOM.progressCanvases.forEach((circle, i) => {
-                myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "rgba(252,198,38,1)", "white", "bold calc(2.8vw + 2.8vh) Open Sans", 1));
+                myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "rgba(252,198,38,1)", "white", "bold calc(2.6vw + 2.6vh) Open Sans", 1));
                 console.log(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "orange", 1);
                 myObjects.circles[i].init();
 
