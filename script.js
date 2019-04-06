@@ -64,7 +64,6 @@ function app() {
                 myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .1, "orange", 1));
                 console.log(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "orange", 1);
                 myObjects.circles[i].init();
-                myObjects.circles[i].run();
 
             });
         },
@@ -197,9 +196,7 @@ function app() {
 
     function init() {
         myDOM.reSize();
-
         myDOM.listen();
-
         myDOM.createProgressCircles();
         // slow !!!!!!!!
         myDOM.setUpSrcs();
