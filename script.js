@@ -7,10 +7,10 @@ function app() {
     }
     const mySetUp = {
         speed: [
-            75 * 2,
-            55 * 2,
-            10 * 2,
-            20 * 2
+            75 * 1,
+            55 * 1,
+            10 * 1,
+            20 * 1
         ],
         progress: [
             .75,
