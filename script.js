@@ -1,9 +1,29 @@
+"use strict";
 window.onload = app;
 function app() {
+    let myObjects = {
+        circles: [],
+        circlesRunning: false
+    }
     const mySetUp = {
-        // for ".project__iframe" || for myDOM.iframes.srcs
+        speed: [
+            75 * 3,
+            49 * 3,
+            5 * 3,
+            20 * 3
+        ],
+        progress: [
+            .75,
+            .49,
+            .05,
+            .20
+        ],
+        // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     }
+
+
+
     const myDOM = {
 
         nav: {
@@ -16,18 +36,21 @@ function app() {
             links: [...document.querySelectorAll(".nav__link")]
 
         },
-        header: document.querySelector(".header"),
-        about: document.querySelector(".main__section--about"),
-        skills: document.querySelector(".main__section--skills"),
-
-        progress: document.querySelector(".main__section--progress"),
-        progressCircles: document.querySelectorAll(".progress__circle"),
-
-        projects: document.querySelector(".main__section--projects"),
-        footer: document.querySelector(".main__section--footer"),
 
         paralax: document.querySelector(".paralax"),
         arrow: document.querySelector(".arrow"),
+
+        header: document.querySelector(".header"),
+        about: document.querySelector(".main__section--about"),
+        skills: document.querySelector(".main__section--skills"),
+        progress: document.querySelector(".main__section--progress"),
+        progressMiddle: undefined,
+        progressCanvases: [...document.querySelectorAll(".progress__canvas")],
+        projects: document.querySelector(".main__section--projects"),
+        footer: document.querySelector(".main__section--footer"),
+
+
+
 
         iframes: {
             srcs: mySetUp.iframesSrcs,
@@ -36,6 +59,15 @@ function app() {
             code: [...document.querySelectorAll(".project__code")],
         },
 
+        createProgressCircles: function () {
+            myDOM.progressCanvases.forEach((circle, i) => {
+                myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .1, "orange", 1));
+                console.log(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "orange", 1);
+                myObjects.circles[i].init();
+                myObjects.circles[i].run();
+
+            });
+        },
 
         setUpSrcs: function () {
             myDOM.iframes.iframes.forEach((iframe, i) => {
@@ -49,14 +81,12 @@ function app() {
         scrollTo: function (target = myDOM.footer, duration = 200) {
             myDOM.paralax.style.animation = "fadeOut .1s forwards";
 
-            // const target = target;
             console.log({ target });
 
             const targetPosition = target.offsetTop;//top of target
             const startPosition = window.pageYOffset;//window se
 
             const distance = targetPosition - startPosition;
-            // const duration = duration;
             let startTime = null;
 
             function ease(time, start, distance, duration) {
@@ -68,7 +98,6 @@ function app() {
 
             function animation(currentTime) {
                 if (startTime === null) startTime = currentTime;
-                console.log(startTime);
                 const timeElapsed = currentTime - startTime;
                 const newPosition = ease(timeElapsed, startPosition, distance, duration);
                 window.scrollTo(0, newPosition);
@@ -83,17 +112,9 @@ function app() {
         },
 
 
-        createProgressCircle: function (container = myDOM.progressCircles[0]) {
-            const canvas = document.createElement("canvas");
-            container.appendChild(cavas);
-            canvas.style.width = "100%";
-            canvas.style.height = "100%";
+        reSize: function () {
+            myDOM.progressMiddle = myDOM.progress.offsetTop + myDOM.progress.offsetHeight / 2;
 
-            const ctx = canvas.getContext("2d");
-
-            function animate() {
-
-            };
 
         },
         listen: function () {
@@ -101,6 +122,21 @@ function app() {
 
             // Event listeners init
 
+            window.addEventListener("resize", myDOM.reSize, false);
+            window.addEventListener("scroll", function () {
+                const windowY = scrollY + innerHeight;
+                const progressMiddle = myDOM.progressMiddle
+
+                if (!mySetUp.circlesRunning && windowY >= progressMiddle) {
+                    myObjects.circles.forEach(circle => {
+                        circle.run();
+                    });
+                    mySetUp.circlesRunning = true;
+                } else if (windowY < progressMiddle) {
+                    mySetUp.circlesRunning = false;
+
+                }
+            }, false);
             // main nav  && hamburge nav  links"on clicks"
             myDOM.nav.links.forEach((link, i) => {
                 const targetName = link.classList.value.slice(21, link.classList.value.length)
@@ -160,11 +196,19 @@ function app() {
     };
 
     function init() {
+        myDOM.reSize();
+
         myDOM.listen();
+
+        myDOM.createProgressCircles();
         // slow !!!!!!!!
         myDOM.setUpSrcs();
     }
     init();
+
+
+
+
 }
 
 
