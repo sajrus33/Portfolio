@@ -78,7 +78,7 @@ function app() {
         },
 
 
-        scrollTo: function (target = myDOM.footer, duration = 200) {
+        scrollTo: function (target = myDOM.header, duration = 200) {
             myDOM.paralax.style.animation = "fadeOut .1s forwards";
 
             console.log({ target });
