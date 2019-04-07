@@ -22,7 +22,9 @@ function app() {
             .20
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
+        // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
+
     }
 
 
@@ -65,11 +67,12 @@ function app() {
         createProgressCircles: function () {
             myDOM.progressCanvases.forEach((circle, i) => {
                 myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "rgba(252,198,38,1)", "white", "bold calc(2.6vw + 2.6vh) Open Sans", 1));
-                console.log(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "orange", 1);
+                console.log(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "rgba(252,198,38,1)", "white", "bold calc(2.6vw + 2.6vh) Open Sans", 1);
                 myObjects.circles[i].init();
 
             });
         },
+
 
         setUpSrcs: function () {
             myDOM.iframes.iframes.forEach((iframe, i) => {
@@ -116,8 +119,6 @@ function app() {
 
         reSize: function () {
             myDOM.progressMiddle = myDOM.progress.offsetTop + myDOM.progress.offsetHeight / 2;
-
-
         },
         listen: function () {
 
@@ -142,14 +143,13 @@ function app() {
             // main nav  && hamburge nav  links"on clicks"
             myDOM.nav.links.forEach((link, i) => {
                 const targetName = link.classList.value.slice(21, link.classList.value.length)
-                console.log(targetName);
                 link.addEventListener("click", function () {
-                    console.log(targetName);
+                    console.log({ targetName });
                     const scrollTime = myDOM[targetName].offsetTop / 2;
                     myDOM.scrollTo(myDOM[targetName], scrollTime);
                 });
                 myDOM.nav.hamLinks[i].addEventListener("click", function () {
-                    console.log(targetName);
+                    console.log({ targetName });
                     const scrollTime = myDOM[targetName].offsetTop / 2;
                     setTimeout(() => {
                         myDOM.scrollTo(myDOM[targetName], scrollTime);
@@ -167,17 +167,17 @@ function app() {
                 myDOM.nav.hamList.classList.toggle("flex");
 
             });
-            myDOM.arrow.addEventListener("click", function () {
-                console.log("click");
-                const scrollTime = Math.abs(window.pageYOffset / 3);
 
+            myDOM.arrow.addEventListener("click", function () {
+                const scrollTime = Math.abs(window.pageYOffset / 3);
+                console.log({ scrollTime });
                 myDOM.scrollTo(myDOM.header, scrollTime);
             });
 
             myDOM.iframes.code.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.getAttribute("data-code");
-                    console.log(url);
+                    console.log({ url });
                     window.open(url);
                 });
 
@@ -185,7 +185,7 @@ function app() {
             myDOM.iframes.check.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.previousElementSibling.getAttribute("src");
-                    console.log(url);
+                    console.log({ url });
                     window.open(url);
                 });
             });
