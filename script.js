@@ -9,13 +9,16 @@ function app() {
         speed: [
             75 * 1,
             55 * 1,
-            10 * 1,
+            45 * 1,
+            15 * 1,
             20 * 1
+
         ],
         progress: [
             .75,
             .55,
-            .10,
+            .45,
+            .15,
             .20
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
