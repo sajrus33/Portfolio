@@ -72,7 +72,7 @@
 
 }
 .about__h2{
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: 800;
 }
 .about__p{
@@ -104,7 +104,7 @@
     height:var(--noteHeight);
     width: var(--noteWidth);
     color: white;
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 800;
 
 

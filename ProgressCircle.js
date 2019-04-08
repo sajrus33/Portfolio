@@ -52,7 +52,7 @@ class ProgresCircle {
             this.ctx.lineWidth = this.size;
 
             this.ctx.arc(this.x, this.y, this.border, 4.72, Math.PI * 2 * this.loaded + 4.72);
-            this.ctx.fillText(String(Math.round(this.loaded * 100)) + "%", this.x, this.y * 1.1);
+            this.ctx.fillText(String(Math.round(this.loaded * 100)) + "%", this.x, this.y * 1.2);
 
             this.ctx.stroke();
 
