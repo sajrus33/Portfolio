@@ -8,16 +8,16 @@ function app() {
     const mySetUp = {
         speed: [
             75 * 1,
-            55 * 1,
-            45 * 1,
+            50 * 1,
+            35 * 1,
             15 * 1,
             20 * 1
 
         ],
         progress: [
             .75,
-            .55,
-            .45,
+            .50,
+            .35,
             .15,
             .20
         ],
@@ -46,6 +46,7 @@ function app() {
         arrow: document.querySelector(".arrow"),
 
         header: document.querySelector(".header"),
+        headerBtn: document.querySelector(".header__button"),
         about: document.querySelector(".main__section--about"),
         skills: document.querySelector(".main__section--skills"),
         progress: document.querySelector(".main__section--progress"),
@@ -140,7 +141,15 @@ function app() {
 
                 }
             }, false);
-            // main nav  && hamburge nav  links"on clicks"
+
+            //HEADER BUTTON
+            myDOM.headerBtn.addEventListener("click", function () {
+                const scrollTime = myDOM.footer.offsetTop / 2;
+                myDOM.scrollTo(myDOM.footer, scrollTime);
+            });
+
+
+            // main NAV  && hamburger nav  links"on clicks"
             myDOM.nav.links.forEach((link, i) => {
                 const targetName = link.classList.value.slice(21, link.classList.value.length)
                 link.addEventListener("click", function () {
@@ -157,13 +166,13 @@ function app() {
                     }, 300);
                 });
             });
-            // hamburger ico menu on click
+            // HAMBURGER ico menu on click
             myDOM.nav.ham.addEventListener("click", function () {
                 // hamburger ico change  ||| -> X
                 myDOM.nav.bar1.classList.toggle("ham__bar--firstA");
                 myDOM.nav.bar2.classList.toggle("ham__bar--secondA");
                 myDOM.nav.bar3.classList.toggle("ham__bar--thirtA");
-                // display mobile nav
+                // display MOBILE NAV
                 myDOM.nav.hamList.classList.toggle("flex");
 
             });
@@ -210,15 +219,6 @@ function app() {
 
 
 }
-
-
-// window.addEventListener("resize", function () {
-//     console.log("header.offSetBottom");
-
-//     console.log(myDOM.about.offsetTop);
-//     console.log(myDOM.header.offsetHeight);
-
-// });
 
 
 
