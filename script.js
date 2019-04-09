@@ -137,20 +137,29 @@ function app() {
         },
 
         sendEmail: function () {
-
+            //  creating new message from inputs values
             const newMessage = {
                 replay_to: String(myDOM.mailForm.number.value),
                 from_name: String(myDOM.mailForm.name.value),
                 to_name: mySetUp.myName,
                 message_html: String(myDOM.mailForm.message.value)
             };
-            console.log(newMessage);
+            // send email with emailjs
             emailjs.send('brianwala22_gmail_com', 'template_gqc9FdOP', newMessage)
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
+            // clean inputs values
+            for (let property in myDOM.mailForm) {
+                if (myDOM.mailForm.hasOwnProperty(property)) {
+                    if (property !== "submit") {
+                        myDOM.mailForm[property].value = "";
+                    }
+                }
+            }
+
         },
 
         // MAIN FUNCTIONS INITIALIZATION
