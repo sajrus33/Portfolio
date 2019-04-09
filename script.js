@@ -1,11 +1,12 @@
 "use strict";
 window.onload = app;
 function app() {
-    let myObjects = {
+    let myObjects = {//just object container 
         circles: [],
         circlesRunning: false
     }
-    const mySetUp = {
+    const mySetUp = {//Here you can set up page app, circles parametrs.. for now.
+        myName: "Brian",
         speed: [
             75 * 1,
             50 * 1,
@@ -30,7 +31,7 @@ function app() {
 
 
     const myDOM = {
-
+        // NAV
         nav: {
             ham: document.querySelector(".ham"),
             bar1: document.querySelector(".ham__bar--first"),
@@ -41,23 +42,39 @@ function app() {
             links: [...document.querySelectorAll(".nav__link")]
 
         },
-
+        // ADDS
         paralax: document.querySelector(".paralax"),
         arrow: document.querySelector(".arrow"),
 
+        // HEADER
         header: document.querySelector(".header"),
         headerBtn: document.querySelector(".header__button"),
+
+        // ABOUT SECTION
         about: document.querySelector(".main__section--about"),
+
+        // SKILLS SECTION
         skills: document.querySelector(".main__section--skills"),
+
+        // PROGRESS SECTION
         progress: document.querySelector(".main__section--progress"),
         progressMiddle: undefined,
         progressCanvases: [...document.querySelectorAll(".progress__canvas")],
+
+        // PROJECTS SECTION
         projects: document.querySelector(".main__section--projects"),
+
+        // FOOTER SECTION
         footer: document.querySelector(".main__section--footer"),
+        mailForm: {
+            name: document.querySelector(".footer__name"),
+            email: document.querySelector(".footer__email"),
+            number: document.querySelector(".footer__number"),
+            message: document.querySelector(".footer__message"),
+            submit: document.querySelector(".footer__submit"),
+        },
 
-
-
-
+        // IFRAMES
         iframes: {
             srcs: mySetUp.iframesSrcs,
             iframes: [...document.querySelectorAll(".project__iframe")],
@@ -65,6 +82,8 @@ function app() {
             code: [...document.querySelectorAll(".project__code")],
         },
 
+
+        // FUNCTIONS
         createProgressCircles: function () {
             myDOM.progressCanvases.forEach((circle, i) => {
                 myObjects.circles.push(new ProgresCircle(circle, mySetUp.speed[i], mySetUp.progress[i], .15, "rgba(252,198,38,1)", "white", "bold calc(2.6vw + 2.6vh) Open Sans", 1));
@@ -117,15 +136,33 @@ function app() {
             requestAnimationFrame(animation)
         },
 
+        sendEmail: function () {
 
+            const newMessage = {
+                replay_to: String(myDOM.mailForm.number.value),
+                from_name: String(myDOM.mailForm.name.value),
+                to_name: mySetUp.myName,
+                message_html: String(myDOM.mailForm.message.value)
+            };
+            console.log(newMessage);
+            emailjs.send('brianwala22_gmail_com', 'template_gqc9FdOP', newMessage)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+        },
+
+        // MAIN FUNCTIONS INITIALIZATION
         reSize: function () {
             myDOM.progressMiddle = myDOM.progress.offsetTop + myDOM.progress.offsetHeight / 2;
         },
         listen: function () {
 
 
-            // Event listeners init
+            //                                              add Event Listeners
 
+            // WINDOW 
             window.addEventListener("resize", myDOM.reSize, false);
             window.addEventListener("scroll", function () {
                 const windowY = scrollY + innerHeight;
@@ -145,9 +182,8 @@ function app() {
             //HEADER BUTTON
             myDOM.headerBtn.addEventListener("click", function () {
                 const scrollTime = myDOM.footer.offsetTop / 2;
-                myDOM.scrollTo(myDOM.footer, scrollTime);
+                myDOM.scrollTo(myDOM.footer, scrollTimev);
             });
-
 
             // main NAV  && hamburger nav  links"on clicks"
             myDOM.nav.links.forEach((link, i) => {
@@ -166,6 +202,7 @@ function app() {
                     }, 300);
                 });
             });
+
             // HAMBURGER ico menu on click
             myDOM.nav.ham.addEventListener("click", function () {
                 // hamburger ico change  ||| -> X
@@ -177,12 +214,14 @@ function app() {
 
             });
 
+            //ARROW NAVIGATION on click
             myDOM.arrow.addEventListener("click", function () {
                 const scrollTime = Math.abs(window.pageYOffset / 3);
                 console.log({ scrollTime });
                 myDOM.scrollTo(myDOM.header, scrollTime);
             });
 
+            // IFRAMES ico menu on click
             myDOM.iframes.code.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.getAttribute("data-code");
@@ -191,6 +230,8 @@ function app() {
                 });
 
             });
+
+            // IFRAMES ico menu on click
             myDOM.iframes.check.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.previousElementSibling.getAttribute("src");
@@ -198,6 +239,11 @@ function app() {
                     window.open(url);
                 });
             });
+
+            myDOM.mailForm.submit.addEventListener("click", function () {
+                event.preventDefault();
+                myDOM.sendEmail();
+            })
 
 
         }
@@ -208,16 +254,19 @@ function app() {
 
     function init() {
         myDOM.reSize();
+        emailjs.init("user_tdJP5pQdemG5AhJpq5J7O");
         myDOM.listen();
         myDOM.createProgressCircles();
-        // slow !!!!!!!!
+        // slow !!!!!!!!, because it sets iframes src, than they loads..== slow
         myDOM.setUpSrcs();
     }
     init();
 
 
-
-
+    /*
+    1
+    $ npm install emailjs-com --save
+     */
 }
 
 
