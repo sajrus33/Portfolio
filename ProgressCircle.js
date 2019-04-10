@@ -41,21 +41,19 @@ class ProgresCircle {
         this.update = () => {
             this.loaded += this.percent;
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
             this.ctx.beginPath();
             this.ctx.strokeStyle = "white";
             this.ctx.lineWidth = this.sizeMid;
-
             this.ctx.arc(this.x, this.y, this.border, 0, Math.PI * 2);
             this.ctx.stroke();
+
             this.ctx.beginPath();
             this.ctx.strokeStyle = this.color;
             this.ctx.lineWidth = this.size;
-
             this.ctx.arc(this.x, this.y, this.border, 4.72, Math.PI * 2 * this.loaded + 4.72);
             this.ctx.fillText(String(Math.round(this.loaded * 100)) + "%", this.x, this.y * 1.2);
-
             this.ctx.stroke();
-
         };
         this.run = () => {
             if (_time) {

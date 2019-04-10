@@ -101,7 +101,7 @@
                         </h2>
                         <p class="about__p">
                             Creating is my biggest passion. I like to write my own Vanilla scripts, instead of using
-                            freamworks.
+                            frameworks.
                         </p>
                     </section>
                     <!-- note wrapper -->
@@ -194,7 +194,9 @@
                         </div>
                         <h3 class="skill__h3">Certifications</h3>
                         <span class="skill__school">Udemy</span>
-                        <p class="skill__p">Advanced HTML/CSS 38h course. Javascript 37h course.</p>
+                        <p class="skill__p">Advanced HTML/CSS 38h course. </p>
+                        <p>Javascript 37h course.</p>
+                        <p></p>
                     </section>
 
                     <!-- skill section END                                                                    -->
@@ -360,19 +362,31 @@
                             class="fas fa-envelope footer__ico footer__ico--contact"></i>brianwala22@gmail.com</div>
 
                     <button class="footer__button">Copy Email</button>
+                    <!-- add for button to copy the value of none displayed input --js -->
+                    <input type="text" value="brianwala22@gmail.com" class="myEmail">
+
                     <section class="footer__wrapper footer__wrapper--media">
-                        <div class="footer__media footer__media--first footer__media--fb"><i
-                                class="fab fa-facebook-f footer__ico footer__ico--fb"></i>
-                        </div>
-                        <div class="footer__media footer__media--second footer__media--github"><i
-                                class="fab fa-github footer__ico footer__ico--git"></i>
-                        </div>
-                        <div class="footer__media footer__media--thirt footer__media--code">
+                        <a href="https://www.facebook.com/brian.wala" target="_blank"
+                            class="footer__media footer__media--first">
+                            <i class="fab fa-facebook-f footer__ico footer__ico--fb"></i>
+                        </a>
+
+
+                        <a href="https://github.com/sajrus33" target="_blank"
+                            class="footer__media footer__media--second">
+                            <i class="fab fa-github footer__ico footer__ico--git"></i>
+                        </a>
+
+                        <a href="https://codepen.io/sajrus33/" target="_blank"
+                            class="footer__media footer__media--thirt">
                             <i class="fab fa-codepen footer__ico footer__ico--code"></i>
-                        </div>
-                        <div class="footer__media footer__media--fifth footer__media--google">
+                        </a>
+
+                        <a href="https://codepen.io/sajrus33/" target="_blank"
+                            class="footer__media footer__media--fifth">
                             <i class="fab fa-google-plus-g footer__ico footer__ico--g"></i>
-                        </div>
+                        </a>
+
                     </section>
                 </address>
             </section>
@@ -380,7 +394,7 @@
             <section class="footer__mailer">
                 <input placeholder="Full Name" type="text" class="footer__input footer__name">
                 <input placeholder="Email" type="text" class="footer__input footer__email">
-                <input placeholder="Number" type="text" class="footer__input footer__number">
+                <input placeholder="Phone Number" type="text" class="footer__input footer__number">
                 <input placeholder="Write your Message here..." type="text" class="footer__input footer__message">
                 <input value="SUBMIT" type="submit" class="footer__input footer__submit">
             </section>

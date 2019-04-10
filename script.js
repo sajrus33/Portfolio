@@ -7,6 +7,7 @@ function app() {
     }
     const mySetUp = {//Here you can set up page app, circles parametrs.. for now.
         myName: "Brian",
+        myEmail: "brianwala22@gmail.com",
         speed: [
             75 * 1,
             50 * 1,
@@ -24,7 +25,7 @@ function app() {
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-        iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
+        iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
 
     }
 
@@ -66,6 +67,8 @@ function app() {
 
         // FOOTER SECTION
         footer: document.querySelector(".main__section--footer"),
+        footerBtn: document.querySelector(".footer__button"),
+        footerEmail: document.querySelector(".myEmail"),
         mailForm: {
             name: document.querySelector(".footer__name"),
             email: document.querySelector(".footer__email"),
@@ -252,7 +255,19 @@ function app() {
             myDOM.mailForm.submit.addEventListener("click", function () {
                 event.preventDefault();
                 myDOM.sendEmail();
-            })
+            });
+
+
+            //click event for copy email button in footer 
+            myDOM.footerBtn.addEventListener("click", function () {
+                myDOM.footerEmail.value = mySetUp.myEmail;
+                console.log(myDOM.footerEmail.value);
+                myDOM.footerEmail.focus();
+
+                myDOM.footerEmail.select();
+                // event.clipboardData.setData("text/plain", newEmailAdress);
+                document.execCommand("copy");
+            });
 
 
         }
