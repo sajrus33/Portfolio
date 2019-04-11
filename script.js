@@ -23,6 +23,12 @@ function app() {
             .15,
             .20
         ],
+        text: [
+            "BEM, SEMANTIC TAGS, HTML5 STANDARDS, Old tehchnologys (inline-block, float-left etc.),git, Responsive desgine, flex, grid, bootrstrap learning.",
+            "Vanilla,ES6,arrow functions,this, bind, class, extends,exports,require, canvas context, jquery lib,git, emailjs lib, ProgressBar.js(my own), npm",
+            "npm,gulp, watch, css-clean, task, pipe, wrapper function,exports, require,jsno-package config,git"
+
+        ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Flubmaster-web/"]
@@ -61,6 +67,8 @@ function app() {
         progress: document.querySelector(".main__section--progress"),
         progressMiddle: undefined,
         progressCanvases: [...document.querySelectorAll(".progress__canvas")],
+        progressSections: [...document.querySelectorAll(".progress__technology")],
+        progressDescribe: document.querySelector(".progress__describe"),
 
         // PROJECTS SECTION
         projects: document.querySelector(".main__section--projects"),
@@ -233,6 +241,35 @@ function app() {
                 myDOM.scrollTo(myDOM.header, scrollTime);
             });
 
+
+
+
+            myDOM.progressSections.forEach((section, i) => {
+                section.addEventListener("click", function () {
+                    myDOM.progressSections.forEach((circle, index) => {
+                        if (i !== index) {
+                            circle.classList.toggle("displayNone");
+                        }
+                    });
+                    myDOM.progressDescribe.classList.toggle("progress__describe--runIn");
+                    if (mySetUp.text[i]) {
+                        myDOM.progressDescribe.innerText = mySetUp.text[i];
+
+                    } else {
+                        myDOM.progressDescribe.innerText = "Content soon..";
+
+                    }
+                    console.log(myDOM.progressDescribe.text);
+
+                    myObjects.circles[i].run();
+
+                });
+            })
+
+
+
+
+
             // IFRAMES ico menu on click
             myDOM.iframes.code.forEach(iframe => {
                 iframe.addEventListener("click", function () {
@@ -279,8 +316,9 @@ function app() {
     function init() {
         myDOM.reSize();
         emailjs.init("user_tdJP5pQdemG5AhJpq5J7O");
-        myDOM.listen();
         myDOM.createProgressCircles();
+
+        myDOM.listen();
         // slow !!!!!!!!, because it sets iframes src, than they loads..== slow
         myDOM.setUpSrcs();
     }
