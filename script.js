@@ -180,9 +180,9 @@ function app() {
         listen: function () {
 
 
-            //                                              add Event Listeners
+            //                                             EVENT LISTENER
 
-            // WINDOW 
+            //            WINDOW 
             window.addEventListener("resize", myDOM.reSize, false);
             window.addEventListener("scroll", function () {
                 const windowY = scrollY + innerHeight;
@@ -199,13 +199,13 @@ function app() {
                 }
             }, false);
 
-            //HEADER BUTTON
+            //           HEADER BUTTON
             myDOM.headerBtn.addEventListener("click", function () {
                 const scrollTime = myDOM.footer.offsetTop / 2;
                 myDOM.scrollTo(myDOM.footer, scrollTimev);
             });
 
-            // main NAV  && hamburger nav  links"on clicks"
+            //            main NAV  && hamburger nav  links"on clicks"
             myDOM.nav.links.forEach((link, i) => {
                 const targetName = link.classList.value.slice(21, link.classList.value.length)
                 link.addEventListener("click", function () {
@@ -223,7 +223,7 @@ function app() {
                 });
             });
 
-            // HAMBURGER ico menu on click
+            //               HAMBURGER ico menu on click
             myDOM.nav.ham.addEventListener("click", function () {
                 // hamburger ico change  ||| -> X
                 myDOM.nav.bar1.classList.toggle("ham__bar--firstA");
@@ -234,7 +234,7 @@ function app() {
 
             });
 
-            //ARROW NAVIGATION on click
+            //           ARROW NAVIGATION on click
             myDOM.arrow.addEventListener("click", function () {
                 const scrollTime = Math.abs(window.pageYOffset / 3);
                 console.log({ scrollTime });
@@ -243,7 +243,7 @@ function app() {
 
 
 
-
+            //            PROGRESS CIRCLE on click
             myDOM.progressSections.forEach((section, i) => {
                 section.addEventListener("click", function () {
                     myDOM.progressSections.forEach((circle, index) => {
@@ -251,7 +251,13 @@ function app() {
                             circle.classList.toggle("displayNone");
                         }
                     });
-                    myDOM.progressDescribe.classList.toggle("progress__describe--runIn");
+
+                    myDOM.progressDescribe.classList.toggle("displayNone");
+                    setTimeout(function () {
+                        myDOM.progressDescribe.classList.toggle("progress__describe--runIn");
+
+                    }, 10)
+
                     if (mySetUp.text[i]) {
                         myDOM.progressDescribe.innerText = mySetUp.text[i];
 
@@ -270,7 +276,7 @@ function app() {
 
 
 
-            // IFRAMES ico menu on click
+            //             IFRAMES ico menu on click
             myDOM.iframes.code.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.getAttribute("data-code");
@@ -280,7 +286,7 @@ function app() {
 
             });
 
-            // IFRAMES ico menu on click
+            //            IFRAMES ico menu on click
             myDOM.iframes.check.forEach(iframe => {
                 iframe.addEventListener("click", function () {
                     const url = this.previousElementSibling.previousElementSibling.getAttribute("src");
@@ -295,7 +301,7 @@ function app() {
             });
 
 
-            //click event for copy email button in footer 
+            //            click event for copy email button in footer 
             myDOM.footerBtn.addEventListener("click", function () {
                 myDOM.footerEmail.value = mySetUp.myEmail;
                 console.log(myDOM.footerEmail.value);
