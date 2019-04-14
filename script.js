@@ -202,7 +202,7 @@ function app() {
             //           HEADER BUTTON
             myDOM.headerBtn.addEventListener("click", function () {
                 const scrollTime = myDOM.footer.offsetTop / 2;
-                myDOM.scrollTo(myDOM.footer, scrollTimev);
+                myDOM.scrollTo(myDOM.footer, scrollTime);
             });
 
             //            main NAV  && hamburger nav  links"on clicks"
