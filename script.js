@@ -197,7 +197,7 @@ function app() {
                     mySetUp.circlesRunning = false;
 
                 }
-            }, false);
+            }, { passive: true });
 
             //           HEADER BUTTON
             myDOM.headerBtn.addEventListener("click", function () {
