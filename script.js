@@ -1,5 +1,5 @@
 "use strict";
-window.onload = app;
+window.addEventListener("DOMContentLoaded", app);
 function app() {
     let myObjects = {//just object container 
         circles: [],
@@ -8,6 +8,7 @@ function app() {
     const mySetUp = {//Here you can set up page app, circles parametrs.. for now.
         myName: "Brian",
         myEmail: "brianwala22@gmail.com",
+        // progress
         speed: [
             75 * 1,
             50 * 1,
