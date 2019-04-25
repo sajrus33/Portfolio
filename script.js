@@ -25,14 +25,14 @@ function app() {
             .20
         ],
         text: [
-            "BEM, SEMANTIC TAGS, HTML5 STANDARDS, Old tehchnologys (inline-block, float-left etc.),git, Responsive desgine, flex, grid, bootrstrap learning.",
-            "Vanilla,ES6,arrow functions,this, bind, class, extends,exports,require, canvas context, jquery lib,git, emailjs lib, ProgressBar.js(my own), npm",
-            "npm,gulp, watch, css-clean, task, pipe, wrapper function,exports, require,jsno-package config,git"
+            "BEM, SEMANTIC TAGS, HTML5 STANDARDS, Old tehchnologys (inline-block, float-left etc.),git, Responsive desgine, flex, grid, bootrstrap4.",
+            "Vanilla,ES6,arrow functions,this, bind, class, extends,exports,require, canvas context, jquery lib,git, emailjs lib,leaflet lib, ProgressBar.js lib(my own), npm.",
+            "npm,gulp, watch, css-clean, task, pipe, wrapper function,exports, require,jsno-package config,git."
 
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-        iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Flubmaster-web/"]
+        iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Rekr/", "https://sajrus33.github.io/Flubmaster-web/"]
 
     }
 
