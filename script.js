@@ -32,7 +32,7 @@ function app() {
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-        iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Rekr/", "https://sajrus33.github.io/Portfolio/"]
+        iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Rekr/", "https://sajrus33.github.io/avangarde/"]
 
     }
 
