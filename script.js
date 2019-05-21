@@ -1,5 +1,5 @@
-import { ProgresCircle } from "/ProgressCircle.js";
-import { myAlert } from "/myAlert.js";
+import { ProgresCircle } from "/Portfolio/ProgressCircle.js";
+import { myAlert } from "/Portfolio/myAlert.js";
 
 ("use strict");
 window.addEventListener("DOMContentLoaded", app);
