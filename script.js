@@ -32,7 +32,7 @@ function app() {
         ],
         // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
         // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-        iframesSrcs: ["https://sajrus33.github.io/TowerDefence/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Rekr/", "https://sajrus33.github.io/avangarde/"]
+        iframesSrcs: ["https://sajrus33.github.io/game-tower-defence/", "https://sajrus33.github.io/avangarde/", "https://sajrus33.github.io/app-todo", "https://sajrus33.github.io/game-memory-cards/", "https://sajrus33.github.io/app-maps/", "https://sajrus33.github.io/web-flubmaster/"]
 
     }
 
