@@ -78,8 +78,6 @@ function app() {
         footer: document.querySelector(".main__section--footer"),
         footerBtn: document.querySelector(".footer__button"),
         footerEmail: document.querySelector(".myEmail"),
-
-
         mailForm: {
             name: document.querySelector(".footer__name"),
             email: document.querySelector(".footer__email"),
@@ -155,13 +153,11 @@ function app() {
             const number = myDOM.mailForm.number.value;
             const name = myDOM.mailForm.name.value;
             const message = myDOM.mailForm.message.value;
-            const email = myDOM.mailForm.email.value;
 
-
-            if(number && name && message &&email){
+            if(number && name && message){
                 const newMessage = {
                     replay_to: String(number),
-                    from_name: String(name) +" "+ String(email),
+                    from_name: String(name),
                     to_name: mySetUp.myName,
                     message_html: String(message)
                 };
