@@ -72,6 +72,7 @@ function app() {
     footer: document.querySelector(".main__section--footer"),
     footerBtn: document.querySelector(".footer__button"),
     footerEmail: document.querySelector(".myEmail"),
+    
     mailForm: {
       name: document.querySelector(".footer__name"),
       email: document.querySelector(".footer__email"),
@@ -163,9 +164,9 @@ function app() {
 
     sendEmail: function() {
       const number = myDOM.mailForm.number.value;
-      const name = myDOM.mailForm.number.value;
-      const email = myDOM.mailForm.number.value;
-      const message = myDOM.mailForm.number.value;
+      const name = myDOM.mailForm.name.value;
+      const email = myDOM.mailForm.email.value;
+      const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
         //  creating new message from inputs values
