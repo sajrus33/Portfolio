@@ -17,9 +17,9 @@ function app() {
     speed: [75 * 1, 50 * 1, 35 * 1, 15 * 1, 20 * 1],
     progress: [0.75, 0.5, 0.35, 0.15, 0.2],
     text: [
-      "BEM, SEMANTIC TAGS, HTML5 STANDARDS, basic SEO, flex, grid, bootrstrap4, Old tehchnologys (inline-block, float-left etc.), Responsive desgine. I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Currently working on: PSD cut to HTML/CSS",
-      "Vanilla, ES6, arrow functions, this, bind, class, extends, exports, require, canvas context, jquery lib, emailjs lib, leaflet lib, ProgressBar.js lib(my own), npm. Currently learning: express. Currently working on: cards game + multiplayer ",
-      "npm,gulp, watch, css-clean, task, pipe, wrapper function, exports, require, jsno-package config, git. Currently learning express. Currently working on: cards game + multiplayer"
+      "BEM, SEMANTIC TAGS, HTML5 STANDARDS, basic SEO, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Always working on: PSD cut to HTML/CSS",
+      "Vanilla, OOP, closures, canvas context drawing(games), ES8, await, async, ES6, arrow functions, this, bind, class, extends, exports, require, jquery lib, emailjs lib, leaflet lib, ProgressBar.js lib(my own), myAlert.js lib(my own), npm. Currently learning: React/Phaser",
+      "npm, http, express, gulp, watch, css-clean, task, pipe, wrapper function, exports, require, json-package config, git. Currently learning express. Currently working on: memory cards game + server side statistics."
     ],
     // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
@@ -72,7 +72,7 @@ function app() {
     footer: document.querySelector(".main__section--footer"),
     footerBtn: document.querySelector(".footer__button"),
     footerEmail: document.querySelector(".myEmail"),
-    
+
     mailForm: {
       name: document.querySelector(".footer__name"),
       email: document.querySelector(".footer__email"),
