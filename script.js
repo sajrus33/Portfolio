@@ -104,16 +104,16 @@ function app() {
             1
           )
         );
-        console.log(
-          circle,
-          mySetUp.speed[i],
-          mySetUp.progress[i],
-          0.15,
-          "rgba(252,198,38,1)",
-          "white",
-          "bold calc(2.6vw + 2.6vh) Open Sans",
-          1
-        );
+        // console.log(
+        //   circle,
+        //   mySetUp.speed[i],
+        //   mySetUp.progress[i],
+        //   0.15,
+        //   "rgba(252,198,38,1)",
+        //   "white",
+        //   "bold calc(2.6vw + 2.6vh) Open Sans",
+        //   1
+        // );
         myObjects.circles[i].init();
       });
     },
