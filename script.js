@@ -14,19 +14,21 @@ function app() {
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    speed: [75 * 1, 50 * 1, 35 * 1, 15 * 1, 20 * 1],
-    progress: [0.75, 0.5, 0.35, 0.15, 0.2],
+    progress: [0.65, 0.6, 0.4, 0.2, 0.2],
+    speed: [65 * 1, 60 * 1, 40 * 1, 20 * 1, 20 * 1],
     text: [
-      "BEM, SEMANTIC TAGS, HTML5 STANDARDS, basic SEO, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Always working on: PSD cut to HTML/CSS",
-      "Vanilla, OOP, closures, canvas context drawing(games), ES8, await, async, ES6, arrow functions, this, bind, class, extends, exports, require, jquery lib, emailjs lib, leaflet lib, ProgressBar.js lib(my own), myAlert.js lib(my own), npm. Currently learning: React/Phaser",
-      "npm, http, express, gulp, watch, css-clean, task, pipe, wrapper function, exports, require, json-package config, git. Currently learning express. Currently working on: memory cards game + server side statistics."
+      'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, tinypng, PWA, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books readed: "Advanced Game Design with HTML5 and JavaScript" Always working on: PSD cut to HTML/CSS',
+      'Vanilla, OOP, naming convention, Data Types and all methods/properties, navigator, history, DOMTokenList,DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games), localStorage, JSON, small app patterns,  ES8, await, async, ES6, arrow functions, this, bind, class, extends, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myAlert.js lib(my own). Books readed: "Advanced Game Design with HTML5 and JavaScript". Currently learning: React/Phaser',
+      "Global, API, REST, WEB API, querystrings,npm, http module, express, gulp, watch, css-clean, task, pipe, wrapper function, exports, require, JSON, json-package config, git. Currently learning express. Currently working on: memory cards game + server side statistics.",
+      "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables",
+      "echo, Data types and methods/properties"
     ],
     // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     iframesSrcs: [
       "https://sajrus33.github.io/game-tower-defence/",
       "https://sajrus33.github.io/avangarde/",
-      "https://sajrus33.github.io/app-todo",
+      "https://sajrus33.github.io/app-todo/",
       "https://sajrus33.github.io/game-memory-cards/",
       "https://sajrus33.github.io/app-maps/",
       "https://sajrus33.github.io/web-flubmaster/"
@@ -44,6 +46,7 @@ function app() {
       hamLinks: [...document.querySelectorAll(".ham__link")],
       links: [...document.querySelectorAll(".nav__link")]
     },
+
     // ADDS
     paralax: document.querySelector(".paralax"),
     arrow: document.querySelector(".arrow"),
