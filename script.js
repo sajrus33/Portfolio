@@ -17,7 +17,7 @@ function app() {
     progress: [0.65, 0.6, 0.4, 0.2, 0.2],
     speed: [65 * 1, 60 * 1, 40 * 1, 20 * 1, 20 * 1],
     text: [
-      'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, tinypng, PWA, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books readed: "Advanced Game Design with HTML5 and JavaScript" Always working on: PSD cut to HTML/CSS',
+      'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, tinypng, PWA, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books readed: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS',
       'Vanilla, OOP, naming convention, Data Types and all methods/properties, navigator, history, DOMTokenList,DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games), localStorage, JSON, small app patterns,  ES8, await, async, ES6, arrow functions, this, bind, class, extends, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myAlert.js lib(my own). Books readed: "Advanced Game Design with HTML5 and JavaScript". Currently learning: React/Phaser',
       "Global, API, REST, WEB API, querystrings,npm, http module, express, gulp, watch, css-clean, task, pipe, wrapper function, exports, require, JSON, json-package config, git. Currently learning express. Currently working on: memory cards game + server side statistics.",
       "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables",
