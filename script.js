@@ -18,21 +18,21 @@ function app() {
     speed: [70 * 1, 51 * 1, 30 * 1, 20 * 1, 25 * 1],
     text: [
       'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, google analytics, tinypng, PWA, flex (almost all projects, You will find on github), grid, bootstrap4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
-      'Vanilla (almost all projects, You will find on github), OOP, naming convention, Data Types and all methods/properties, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), localStorage, JSON, app filesystem patterns,  ES8, await, async, ES6, arrow functions, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myDOM.js libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
+      'Vanilla (almost all projects, You will find on github), syntax of JSX(Babel) and Typescript(superset of JS, similiar to C++), OOP, naming convention, Data Types and all methods/properties, Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), localStorage, JSON, app filesystem patterns,  ES8, await, async, ES6, arrow functions, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myDOM.js libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
       "Global, API, REST, WEB API, querystrings. npm, install dependecie -g, link dependecie, init -y, install rimraf -g, rimraf node_modules, git push, git pull, npm install. net, http, class Server all methods/events, request (IncomingMessage), responde (ServerResponse), class ClientRequest, express, set, get, locals, app.METHODS, use, server, app, Router (setting routes), sendFile, views, statics (documentation). gulp, task, watch, css-clean, concat, pipe. wrapper function, exports, require, JSON, json-package config, git. Currently learning express. Currently working on: server side apps.",
       "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables.",
       'My first programming language :). All kind of data types and methods/properties, OOP, class, public, private, protected, inherit, pointers, algorithms(bubble sort, quicksort), libs: iostream, string, cstdlib more than windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
-    ],
+    ]
     // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-    iframesSrcs: [
-      "https://sajrus33.github.io/game-tower-defence/",
-      "https://sajrus33.github.io/lib-progress-circles/",
-      "https://sajrus33.github.io/app-todo/",
-      "https://sajrus33.github.io/game-memory-cards/",
-      "https://sajrus33.github.io/app-maps/",
-      "https://sajrus33.github.io/web-flubmaster/"
-    ]
+    // iframesSrcs: [
+    //   "https://sajrus33.github.io/game-tower-defence/",
+    //   "https://sajrus33.github.io/lib-progress-circles/",
+    //   "https://sajrus33.github.io/app-todo/",
+    //   "https://sajrus33.github.io/game-memory-cards/",
+    //   "https://sajrus33.github.io/app-maps/",
+    //   "https://sajrus33.github.io/web-flubmaster/"
+    // ]
   };
 
   const myDOM = {
@@ -84,12 +84,26 @@ function app() {
       submit: document.querySelector(".footer__submit")
     },
 
+    //   "https://sajrus33.github.io/game-tower-defence/",
+    //   "https://sajrus33.github.io/lib-progress-circles/",
+    //   "https://sajrus33.github.io/app-todo/",
+    //   "https://sajrus33.github.io/game-memory-cards/",
+    //   "https://sajrus33.github.io/app-maps/",
+    //   "https://sajrus33.github.io/web-flubmaster/"
     // IFRAMES
     iframes: {
-      srcs: mySetUp.iframesSrcs,
-      iframes: [...document.querySelectorAll(".project__iframe")],
-      check: [...document.querySelectorAll(".project__check")],
-      code: [...document.querySelectorAll(".project__code")]
+      imgs: [
+        "img/game-tower.png",
+        "img/web-portfolio.png",
+        "img/app-todo.png",
+        "img/game-memory.png",
+        "img/app-maps.png",
+        "img/web-flubmaster.png"
+      ],
+      // srcs: mySetUp.iframesSrcs,
+      iframes: [...document.querySelectorAll(".project__iframe")]
+      // check: [...document.querySelectorAll(".project__check")],
+      // code: [...document.querySelectorAll(".project__code")]
     },
 
     // FUNCTIONS
@@ -117,12 +131,6 @@ function app() {
         //   1
         // );
         myObjects.circles[i].init();
-      });
-    },
-
-    setUpSrcs: function() {
-      myDOM.iframes.iframes.forEach((iframe, i) => {
-        iframe.src = myDOM.iframes.srcs[i];
       });
     },
 
@@ -180,9 +188,11 @@ function app() {
           .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
           .then(
             function(response) {
+              // console.log(response)
               myAlert("Message has been sent");
             },
             function(error) {
+              // console.log(error);
               myAlert("Message couldn't been sent, We are sorry.");
             }
           );
@@ -303,21 +313,26 @@ function app() {
       });
 
       //             IFRAMES ico menu on click
-      myDOM.iframes.code.forEach(iframe => {
-        iframe.addEventListener("click", function() {
-          const url = this.previousElementSibling.getAttribute("data-code");
-          window.open(url);
-        });
-      });
+      // myDOM.iframes.code.forEach(iframe => {
+      //   iframe.addEventListener("click", function() {
+      //     const url = this.previousElementSibling.getAttribute("data-code");
+      //     window.open(url);
+      //   });
+      // });
 
       //            IFRAMES ico menu on click
-      myDOM.iframes.check.forEach(iframe => {
-        iframe.addEventListener("click", function() {
-          const url = this.previousElementSibling.previousElementSibling.getAttribute(
-            "src"
-          );
-          window.open(url);
-        });
+      // myDOM.iframes.check.forEach(iframe => {
+      //   iframe.addEventListener("click", function() {
+      //     const url = this.previousElementSibling.previousElementSibling.getAttribute(
+      //       "src"
+      //     );
+      //     window.open(url);
+      //   });
+      // });
+
+      myDOM.iframes.iframes.forEach((iframe, i) => {
+        iframe.style.backgroundImage = "url('" + myDOM.iframes.imgs[i] + "')";
+        console.log({ iframe });
       });
 
       myDOM.mailForm.submit.addEventListener("click", function() {
@@ -344,7 +359,7 @@ function app() {
 
     myDOM.listen();
     // slow !!!!!!!!, because it sets iframes src, than they loads..== slow
-    myDOM.setUpSrcs();
+    // myDOM.setUpSrcs();
   }
   init();
 
