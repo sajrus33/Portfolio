@@ -332,7 +332,7 @@ function app() {
 
       myDOM.iframes.iframes.forEach((iframe, i) => {
         iframe.style.backgroundImage = "url('" + myDOM.iframes.imgs[i] + "')";
-        console.log({ iframe });
+        // console.log({ iframe });/
       });
 
       myDOM.mailForm.submit.addEventListener("click", function() {
