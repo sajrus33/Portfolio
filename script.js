@@ -200,7 +200,7 @@ function app() {
             }
           }
         }
-      } else myAlert("Please fill out all fields of the form");
+      } else myAlert("Please fill out all form positions");
     },
 
     // MAIN FUNCTIONS INITIALIZATION
