@@ -1,8 +1,6 @@
 {
     "name": "Portfolio - Wala Brian. Junior Frontend Developer",
     "short_name": "Portfolio-WB",
-    "theme_color": "#ec1b62",
-    "background_color": "#2c3030",
     "display": "standalone",
     "Scope": "https://sajrus33.github.io/Portfolio/",
     "start_url": "https://sajrus33.github.io/Portfolio/index.html",

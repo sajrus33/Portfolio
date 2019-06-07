@@ -9,30 +9,31 @@ function app() {
     circles: [],
     circlesRunning: false
   };
+
   const mySetUp = {
     //Here you can set up page app, circles parametrs.. for now.
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    progress: [0.65, 0.6, 0.4, 0.2, 0.2],
-    speed: [65 * 1, 60 * 1, 40 * 1, 20 * 1, 20 * 1],
+    progress: [0.7, 0.52, 0.25, 0.2, 0.25],
+    speed: [70 * 1, 52 * 1, 25 * 1, 20 * 1, 25 * 1],
     text: [
-      'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, tinypng, PWA, flex, grid, bootstrap4, Old tehchnologys (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books readed: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS',
-      'Vanilla, OOP, naming convention, Data Types and all methods/properties, navigator, history, DOMTokenList,DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games), localStorage, JSON, small app patterns,  ES8, await, async, ES6, arrow functions, this, bind, class, extends, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myAlert.js lib(my own). Books readed: "Advanced Game Design with HTML5 and JavaScript". Currently learning: React/Phaser',
-      "Global, API, REST, WEB API, querystrings. npm, install dependecie -g, link dependecie, init -y, install rimraf -g, rimraf node_modules, git push, git pull, install. net, http, Server, IncomingMessage, ServerResponse, ClientRequest, express, server, app, Router, views, statics (!documentation). gulp, watch, css-clean, task, pipe. wrapper function, exports, require, JSON, json-package config, git. Currently learning express. Currently working on: memory cards game + server side statistics.",
-      "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables",
-      "echo, Data types and methods/properties"
-    ],
+      'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, google analytics, tinypng, PWA, flex (almost all projects, You will find on github), grid, bootstrap4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
+      'Vanilla (almost all projects, You will find on github), syntax of JSX(Babel) and Typescript(superset of JS), DRY, OOP, naming convention, all Data Types and all methods/properties, Algorithms, Designe Patterns, Data modeling, Clean code, Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), localStorage, JSON, app filesystem patterns,  ES8, await, async, ES6, arrow functions, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myDOM.js libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
+      "Global, API, REST, WEB API, querystrings. npm, install dependecie -g, link dependecie, init -y, install rimraf -g, rimraf node_modules, git push, git pull, npm install. net, http, class Server all methods/events, request (IncomingMessage), responde (ServerResponse), class ClientRequest, express, set, get, locals, app.METHODS, use, server, app, Router (setting routes), sendFile, views, statics (documentation). gulp, task, watch, css-clean, concat, pipe. wrapper function, exports, require, JSON, json-package config, git. Currently learning express. Currently working on: server side apps.",
+      "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables.",
+      'My first programming language :). All kind of data types and methods/properties, OOP, class, public, private, protected, inherit, pointers, algorithms(bubble sort, quicksort), libs: iostream, string, cstdlib more than windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
+    ]
     // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
     // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-    iframesSrcs: [
-      "https://sajrus33.github.io/game-tower-defence/",
-      "https://sajrus33.github.io/lib-progress-circles/",
-      "https://sajrus33.github.io/app-todo/",
-      "https://sajrus33.github.io/game-memory-cards/",
-      "https://sajrus33.github.io/app-maps/",
-      "https://sajrus33.github.io/web-flubmaster/"
-    ]
+    // iframesSrcs: [
+    //   "https://sajrus33.github.io/game-tower-defence/",
+    //   "https://sajrus33.github.io/lib-progress-circles/",
+    //   "https://sajrus33.github.io/app-todo/",
+    //   "https://sajrus33.github.io/game-memory-cards/",
+    //   "https://sajrus33.github.io/app-maps/",
+    //   "https://sajrus33.github.io/web-flubmaster/"
+    // ]
   };
 
   const myDOM = {
@@ -84,16 +85,30 @@ function app() {
       submit: document.querySelector(".footer__submit")
     },
 
+    //   "https://sajrus33.github.io/game-tower-defence/",
+    //   "https://sajrus33.github.io/lib-progress-circles/",
+    //   "https://sajrus33.github.io/app-todo/",
+    //   "https://sajrus33.github.io/game-memory-cards/",
+    //   "https://sajrus33.github.io/app-maps/",
+    //   "https://sajrus33.github.io/web-flubmaster/"
     // IFRAMES
     iframes: {
-      srcs: mySetUp.iframesSrcs,
-      iframes: [...document.querySelectorAll(".project__iframe")],
-      check: [...document.querySelectorAll(".project__check")],
-      code: [...document.querySelectorAll(".project__code")]
+      imgs: [
+        "img/game-tower.png",
+        "img/web-portfolio.png",
+        "img/app-todo.png",
+        "img/game-memory.png",
+        "img/app-maps.png",
+        "img/web-flubmaster.png"
+      ],
+      // srcs: mySetUp.iframesSrcs,
+      iframes: [...document.querySelectorAll(".project__iframe")]
+      // check: [...document.querySelectorAll(".project__check")],
+      // code: [...document.querySelectorAll(".project__code")]
     },
 
     // FUNCTIONS
-    createProgressCircles: function () {
+    createProgressCircles: function() {
       myDOM.progressCanvases.forEach((circle, i) => {
         myObjects.circles.push(
           new ProgresCircle(
@@ -107,7 +122,6 @@ function app() {
             1
           )
         );
-        // console.log(
         //   circle,
         //   mySetUp.speed[i],
         //   mySetUp.progress[i],
@@ -121,17 +135,8 @@ function app() {
       });
     },
 
-    setUpSrcs: function () {
-      myDOM.iframes.iframes.forEach((iframe, i) => {
-        iframe.src = myDOM.iframes.srcs[i];
-        console.log(iframe.src);
-      });
-    },
-
-    scrollTo: function (target = myDOM.header, duration = 200) {
+    scrollTo: function(target = myDOM.header, duration = 200) {
       myDOM.paralax.style.animation = "fadeOut .1s forwards";
-
-      console.log({ target });
 
       const targetPosition = target.offsetTop; //top of target
       const startPosition = window.pageYOffset; //window se
@@ -165,7 +170,7 @@ function app() {
       requestAnimationFrame(animation);
     },
 
-    sendEmail: function () {
+    sendEmail: function() {
       const number = myDOM.mailForm.number.value;
       const name = myDOM.mailForm.name.value;
       const email = myDOM.mailForm.email.value;
@@ -183,13 +188,15 @@ function app() {
         emailjs
           .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
           .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
+            function(response) {
+              // console.log(response)
               myAlert("Message has been sent");
             },
-            function (error) {
-              console.log("FAILED...", error);
-              myAlert("Message couldn't been sent, We are sorry.");
+            function(error) {
+              // console.log(error);
+              myAlert(
+                "Message couldn't been sent, mailbox is full. We are sorry."
+              );
             }
           );
         // clean inputs values
@@ -204,18 +211,18 @@ function app() {
     },
 
     // MAIN FUNCTIONS INITIALIZATION
-    reSize: function () {
+    reSize: function() {
       myDOM.progressMiddle =
         myDOM.progress.offsetTop + myDOM.progress.offsetHeight / 2;
     },
-    listen: function () {
+    listen: function() {
       //                                             EVENT LISTENER
 
       //            WINDOW
       window.addEventListener("resize", myDOM.reSize, false);
       window.addEventListener(
         "scroll",
-        function () {
+        function() {
           const windowY = scrollY + innerHeight;
           const progressMiddle = myDOM.progressMiddle;
 
@@ -232,7 +239,7 @@ function app() {
       );
 
       //           HEADER BUTTON
-      myDOM.headerBtn.addEventListener("click", function () {
+      myDOM.headerBtn.addEventListener("click", function() {
         const scrollTime = myDOM.footer.offsetTop / 2;
         myDOM.scrollTo(myDOM.footer, scrollTime);
       });
@@ -243,13 +250,11 @@ function app() {
           21,
           link.classList.value.length
         );
-        link.addEventListener("click", function () {
-          console.log({ targetName });
+        link.addEventListener("click", function() {
           const scrollTime = myDOM[targetName].offsetTop / 2;
           myDOM.scrollTo(myDOM[targetName], scrollTime);
         });
-        myDOM.nav.hamLinks[i].addEventListener("click", function () {
-          console.log({ targetName });
+        myDOM.nav.hamLinks[i].addEventListener("click", function() {
           const scrollTime = myDOM[targetName].offsetTop / 2;
           setTimeout(() => {
             myDOM.scrollTo(myDOM[targetName], scrollTime);
@@ -259,7 +264,7 @@ function app() {
       });
 
       //               HAMBURGER ico menu on click
-      myDOM.nav.ham.addEventListener("click", function () {
+      myDOM.nav.ham.addEventListener("click", function() {
         // hamburger ico change  ||| -> X
         myDOM.nav.bar1.classList.toggle("ham__bar--firstA");
         myDOM.nav.bar2.classList.toggle("ham__bar--secondA");
@@ -269,15 +274,14 @@ function app() {
       });
 
       //           ARROW NAVIGATION on click
-      myDOM.arrow.addEventListener("click", function () {
+      myDOM.arrow.addEventListener("click", function() {
         const scrollTime = Math.abs(window.pageYOffset / 3);
-        console.log({ scrollTime });
         myDOM.scrollTo(myDOM.header, scrollTime);
       });
 
       //            PROGRESS CIRCLE on click
       myDOM.progressSections.forEach((section, i) => {
-        section.addEventListener("click", function () {
+        section.addEventListener("click", function() {
           myDOM.progressSections.forEach((circle, index) => {
             if (i !== index) {
               circle.classList.toggle("displayNone");
@@ -285,52 +289,63 @@ function app() {
           });
 
           myDOM.progressDescribe.classList.toggle("displayNone");
-          setTimeout(function () {
+          setTimeout(function() {
             myDOM.progressDescribe.classList.toggle(
               "progress__describe--runIn"
             );
           }, 10);
 
           if (mySetUp.text[i]) {
-            myDOM.progressDescribe.innerText = mySetUp.text[i];
+            myDOM.progressDescribe.innerText = "";
+
+            const newH2 = document.createElement("h2");
+            newH2.innerText = "My knowledge";
+
+            const newP = document.createElement("p");
+            newP.innerText = mySetUp.text[i];
+
+            // myDOM.progressDescribe.innerText = mySetUp.text[i];
+            myDOM.progressDescribe.appendChild(newH2);
+            myDOM.progressDescribe.appendChild(newP);
           } else {
             myDOM.progressDescribe.innerText = "Content soon..";
           }
-          console.log(myDOM.progressDescribe.text);
 
           myObjects.circles[i].run();
         });
       });
 
       //             IFRAMES ico menu on click
-      myDOM.iframes.code.forEach(iframe => {
-        iframe.addEventListener("click", function () {
-          const url = this.previousElementSibling.getAttribute("data-code");
-          console.log({ url });
-          window.open(url);
-        });
-      });
+      // myDOM.iframes.code.forEach(iframe => {
+      //   iframe.addEventListener("click", function() {
+      //     const url = this.previousElementSibling.getAttribute("data-code");
+      //     window.open(url);
+      //   });
+      // });
 
       //            IFRAMES ico menu on click
-      myDOM.iframes.check.forEach(iframe => {
-        iframe.addEventListener("click", function () {
-          const url = this.previousElementSibling.previousElementSibling.getAttribute(
-            "src"
-          );
-          console.log({ url });
-          window.open(url);
-        });
+      // myDOM.iframes.check.forEach(iframe => {
+      //   iframe.addEventListener("click", function() {
+      //     const url = this.previousElementSibling.previousElementSibling.getAttribute(
+      //       "src"
+      //     );
+      //     window.open(url);
+      //   });
+      // });
+
+      myDOM.iframes.iframes.forEach((iframe, i) => {
+        iframe.style.backgroundImage = "url('" + myDOM.iframes.imgs[i] + "')";
+        // console.log({ iframe });/
       });
 
-      myDOM.mailForm.submit.addEventListener("click", function () {
+      myDOM.mailForm.submit.addEventListener("click", function() {
         event.preventDefault();
         myDOM.sendEmail();
       });
 
       //            click event for copy email button in footer
-      myDOM.footerBtn.addEventListener("click", function () {
+      myDOM.footerBtn.addEventListener("click", function() {
         myDOM.footerEmail.value = mySetUp.myEmail;
-        console.log(myDOM.footerEmail.value);
         myDOM.footerEmail.focus();
 
         myDOM.footerEmail.select();
@@ -347,7 +362,7 @@ function app() {
 
     myDOM.listen();
     // slow !!!!!!!!, because it sets iframes src, than they loads..== slow
-    myDOM.setUpSrcs();
+    // myDOM.setUpSrcs();
   }
   init();
 

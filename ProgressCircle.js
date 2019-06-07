@@ -17,7 +17,6 @@ export class ProgresCircle {
     this.alpha = alpha;
 
     this.reSize = () => {
-      console.log("Circle Progress Bar -> resized");
       this.canvas.height = this.canvas.clientHeight;
       this.canvas.width = this.canvas.clientWidth;
       this.x = this.canvas.width / 2;
