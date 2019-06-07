@@ -14,8 +14,8 @@ function app() {
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    progress: [0.7, 0.51, 0.3, 0.2, 0.25],
-    speed: [70 * 1, 51 * 1, 30 * 1, 20 * 1, 25 * 1],
+    progress: [0.7, 0.52, 0.25, 0.2, 0.25],
+    speed: [70 * 1, 52 * 1, 25 * 1, 20 * 1, 25 * 1],
     text: [
       'BEM, SEMANTIC TAGS, HTML5 STANDARDS, SEO, google analytics, tinypng, PWA, flex (almost all projects, You will find on github), grid, bootstrap4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
       'Vanilla (almost all projects, You will find on github), syntax of JSX(Babel) and Typescript(superset of JS, similiar to C++), OOP, naming convention, Data Types and all methods/properties, Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), localStorage, JSON, app filesystem patterns,  ES8, await, async, ES6, arrow functions, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, leaflet.js lib, ProgressBar.js + myDOM.js libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
@@ -193,7 +193,9 @@ function app() {
             },
             function(error) {
               // console.log(error);
-              myAlert("Message couldn't been sent, We are sorry.");
+              myAlert(
+                "Message couldn't been sent, mailbox is full. We are sorry."
+              );
             }
           );
         // clean inputs values
