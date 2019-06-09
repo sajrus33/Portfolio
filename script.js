@@ -191,6 +191,7 @@ function app() {
             (response) => {
               // console.log(response)
               myAlert("Message has been sent");
+              grecaptcha.reset();
               for (let property in myDOM.mailForm) {
                 if (myDOM.mailForm.hasOwnProperty(property)) {
                   if (property !== "submit") {
