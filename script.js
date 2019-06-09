@@ -191,6 +191,13 @@ function app() {
             (response) => {
               // console.log(response)
               myAlert("Message has been sent");
+              for (let property in myDOM.mailForm) {
+                if (myDOM.mailForm.hasOwnProperty(property)) {
+                  if (property !== "submit") {
+                    myDOM.mailForm[property].value = "";
+                  }
+                }
+              }
             },
             (error) => {
               let alertString;
@@ -203,13 +210,7 @@ function app() {
             }
           );
         // clean inputs values
-        for (let property in myDOM.mailForm) {
-          if (myDOM.mailForm.hasOwnProperty(property)) {
-            if (property !== "submit") {
-              myDOM.mailForm[property].value = "";
-            }
-          }
-        }
+
       } else myAlert("Please fill out all form positions");
     },
 
