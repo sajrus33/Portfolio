@@ -108,7 +108,7 @@ function app() {
     },
 
     // FUNCTIONS
-    createProgressCircles: function() {
+    createProgressCircles: function () {
       myDOM.progressCanvases.forEach((circle, i) => {
         myObjects.circles.push(
           new ProgresCircle(
@@ -135,7 +135,7 @@ function app() {
       });
     },
 
-    scrollTo: function(target = myDOM.header, duration = 200) {
+    scrollTo: function (target = myDOM.header, duration = 200) {
       myDOM.paralax.style.animation = "fadeOut .1s forwards";
 
       const targetPosition = target.offsetTop; //top of target
@@ -170,7 +170,7 @@ function app() {
       requestAnimationFrame(animation);
     },
 
-    sendEmail: function() {
+    sendEmail: () => {
       const number = myDOM.mailForm.number.value;
       const name = myDOM.mailForm.name.value;
       const email = myDOM.mailForm.email.value;
@@ -188,15 +188,18 @@ function app() {
         emailjs
           .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
           .then(
-            function(response) {
+            (response) => {
               // console.log(response)
               myAlert("Message has been sent");
             },
-            function(error) {
-              // console.log(error);
-              myAlert(
-                "Message couldn't been sent, mailbox is full. We are sorry."
-              );
+            (error) => {
+              let alertString;
+              if (error.status == 400) {
+                alertString = "Verification by reCAPTCHA is needed !";
+              } else {
+                alertString = "We are sorry, automatic mailbox is full !";
+              }
+              myAlert(alertString);
             }
           );
         // clean inputs values
@@ -211,18 +214,18 @@ function app() {
     },
 
     // MAIN FUNCTIONS INITIALIZATION
-    reSize: function() {
+    reSize: () => {
       myDOM.progressMiddle =
         myDOM.progress.offsetTop + myDOM.progress.offsetHeight / 2;
     },
-    listen: function() {
+    listen: () => {
       //                                             EVENT LISTENER
 
       //            WINDOW
       window.addEventListener("resize", myDOM.reSize, false);
       window.addEventListener(
         "scroll",
-        function() {
+        () => {
           const windowY = scrollY + innerHeight;
           const progressMiddle = myDOM.progressMiddle;
 
@@ -239,7 +242,7 @@ function app() {
       );
 
       //           HEADER BUTTON
-      myDOM.headerBtn.addEventListener("click", function() {
+      myDOM.headerBtn.addEventListener("click", () => {
         const scrollTime = myDOM.footer.offsetTop / 2;
         myDOM.scrollTo(myDOM.footer, scrollTime);
       });
@@ -250,11 +253,11 @@ function app() {
           21,
           link.classList.value.length
         );
-        link.addEventListener("click", function() {
+        link.addEventListener("click", () => {
           const scrollTime = myDOM[targetName].offsetTop / 2;
           myDOM.scrollTo(myDOM[targetName], scrollTime);
         });
-        myDOM.nav.hamLinks[i].addEventListener("click", function() {
+        myDOM.nav.hamLinks[i].addEventListener("click", () => {
           const scrollTime = myDOM[targetName].offsetTop / 2;
           setTimeout(() => {
             myDOM.scrollTo(myDOM[targetName], scrollTime);
@@ -264,7 +267,7 @@ function app() {
       });
 
       //               HAMBURGER ico menu on click
-      myDOM.nav.ham.addEventListener("click", function() {
+      myDOM.nav.ham.addEventListener("click", () => {
         // hamburger ico change  ||| -> X
         myDOM.nav.bar1.classList.toggle("ham__bar--firstA");
         myDOM.nav.bar2.classList.toggle("ham__bar--secondA");
@@ -274,14 +277,14 @@ function app() {
       });
 
       //           ARROW NAVIGATION on click
-      myDOM.arrow.addEventListener("click", function() {
+      myDOM.arrow.addEventListener("click", () => {
         const scrollTime = Math.abs(window.pageYOffset / 3);
         myDOM.scrollTo(myDOM.header, scrollTime);
       });
 
       //            PROGRESS CIRCLE on click
       myDOM.progressSections.forEach((section, i) => {
-        section.addEventListener("click", function() {
+        section.addEventListener("click", () => {
           myDOM.progressSections.forEach((circle, index) => {
             if (i !== index) {
               circle.classList.toggle("displayNone");
@@ -289,7 +292,7 @@ function app() {
           });
 
           myDOM.progressDescribe.classList.toggle("displayNone");
-          setTimeout(function() {
+          setTimeout(() => {
             myDOM.progressDescribe.classList.toggle(
               "progress__describe--runIn"
             );
@@ -304,7 +307,6 @@ function app() {
             const newP = document.createElement("p");
             newP.innerText = mySetUp.text[i];
 
-            // myDOM.progressDescribe.innerText = mySetUp.text[i];
             myDOM.progressDescribe.appendChild(newH2);
             myDOM.progressDescribe.appendChild(newP);
           } else {
@@ -315,36 +317,17 @@ function app() {
         });
       });
 
-      //             IFRAMES ico menu on click
-      // myDOM.iframes.code.forEach(iframe => {
-      //   iframe.addEventListener("click", function() {
-      //     const url = this.previousElementSibling.getAttribute("data-code");
-      //     window.open(url);
-      //   });
-      // });
-
-      //            IFRAMES ico menu on click
-      // myDOM.iframes.check.forEach(iframe => {
-      //   iframe.addEventListener("click", function() {
-      //     const url = this.previousElementSibling.previousElementSibling.getAttribute(
-      //       "src"
-      //     );
-      //     window.open(url);
-      //   });
-      // });
-
       myDOM.iframes.iframes.forEach((iframe, i) => {
         iframe.style.backgroundImage = "url('" + myDOM.iframes.imgs[i] + "')";
-        // console.log({ iframe });/
       });
 
-      myDOM.mailForm.submit.addEventListener("click", function() {
+      myDOM.mailForm.submit.addEventListener("click", function () {
         event.preventDefault();
         myDOM.sendEmail();
       });
 
       //            click event for copy email button in footer
-      myDOM.footerBtn.addEventListener("click", function() {
+      myDOM.footerBtn.addEventListener("click", function () {
         myDOM.footerEmail.value = mySetUp.myEmail;
         myDOM.footerEmail.focus();
 
@@ -355,15 +338,14 @@ function app() {
     }
   };
 
-  function init() {
+  const init = () => {
     myDOM.reSize();
     emailjs.init("user_tdJP5pQdemG5AhJpq5J7O");
     myDOM.createProgressCircles();
 
     myDOM.listen();
-    // slow !!!!!!!!, because it sets iframes src, than they loads..== slow
-    // myDOM.setUpSrcs();
-  }
+
+  };
   init();
 
   /*
