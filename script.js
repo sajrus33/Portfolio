@@ -5,7 +5,7 @@ import { myAlert } from "/Portfolio/myAlert.js";
 window.addEventListener("DOMContentLoaded", app);
 function app() {
   let myObjects = {
-    //just object container
+    //just object containers
     circles: [],
     circlesRunning: false
   };
@@ -19,21 +19,12 @@ function app() {
     speed: [70 * 1, 52 * 1, 25 * 1, 20 * 1, 25 * 1],
     text: [
       'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, google analytics, tinypng, PWA, flex (almost all projects), grid, BS4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
-      'Vanilla, syntax of JSX(Babel) and Typescript(superset of JS), OOP, DRY, naming convention, all Data Types and all methods/properties, API, Algorithms(most knowledge based on C++), Data modeling. Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, Error handling, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), JSON, localStorage, application filesystem patterns,  ES8, await, async, ES6, arrow functions, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, reCAPTCHA, leaflet.js lib, (ProgressBar.js + myDOM.js + myAlert.js) libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
-      "Global, REST, WEB API, URL, IP, Server Statuses, wrapper function, exports, require. mkdir, touch, cd. npm(moving project with dependencies)=>{npm install dependecie -g, npm link dependecie, init -y, npm install rimraf -g, rimraf node_modules, git push, git pull, npm install}. Path, FileSystem, url, events, net, http (class Server all methods/events, eg. request (IncomingMessage), responde (ServerResponse), class ClientRequest), express(set, get, locals, app.METHODS, server, app, Router (setting routes), use, send, redirect, sendFile, views, statics (documentation)). gulp(task, watch, css-clean, concat, pipe). JSON, json-package config, git. Currently study on express. Currently working on: server side apps.",
+      'Vanilla, syntax of JSX(Babel) and Typescript(superset of JS), OOP, DRY, naming convention, all Data Types and all methods/properties, API, Algorithms(most knowledge based on C++) and algorithmic computational complexity (O, Ω, Θ), Data modeling. Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, Error handling, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), JSON, localStorage, application filesystem patterns,  ES8, await, async, ES6, arrow functions, date, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, reCAPTCHA, leaflet.js lib, (ProgressBar.js + myDOM.js + myAlert.js) libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
+      "Global, REST API, URL protocol, IP, Server Statuses, wrapper function, exports, require. mkdir, touch, cd. npm(moving project with dependencies)=>{npm install dependecie -g, npm link dependecie, init -y, npm install rimraf -g, rimraf node_modules, git push, git pull, npm install}, run. Gulp(task, watch, css-clean, concat, pipe). JSON, json-package config, git, heroku. Modules: Debugger, Error(methods), Path, FileSystem, Os, Url, Events, Net, Http(class Server all methods/events, eg. request (IncomingMessage), responde (ServerResponse), class ClientRequest). Framework: Express(set, get, locals, app.METHODS, server, app, Router (setting routes), use, send, redirect, sendFile, views, statics (documentation)). Currently study on server side + db. Currently working on: server side apps.",
       "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables.",
-      'My first programming language :). All kind of data types (beside vector) and methods/properties, OOP, class, public, private, protected, inherit, pointers, algorithms(bubble sort, quicksort), libs: iostream, string, cstdlib more than windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
+      'My first programming language :). All kind of data types (beside vector) and methods/properties, OOP, pointers, class, public, private, protected, inherit, algorithms(tree sort ,bubble sort, quick sort, binary search, merge sort), libs: iostream, string, cstdlib > windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
     ]
-    // for ".project__iframe" || for myDOM.iframes.srcsttps://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-    // iframesSrcs: ["https://sajrus33.github.io/Flubmaster-web/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/App-ToDo/index.html", "https://sajrus33.github.io/Card-game-prototype/", "https://sajrus33.github.io/Escape-Layout/", "https://sajrus33.github.io/Flubmaster-web/"]
-    // iframesSrcs: [
-    //   "https://sajrus33.github.io/game-tower-defence/",
-    //   "https://sajrus33.github.io/lib-progress-circles/",
-    //   "https://sajrus33.github.io/app-todo/",
-    //   "https://sajrus33.github.io/game-memory-cards/",
-    //   "https://sajrus33.github.io/app-maps/",
-    //   "https://sajrus33.github.io/web-flubmaster/"
-    // ]
+
   };
 
   const myDOM = {
