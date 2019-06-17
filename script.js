@@ -15,16 +15,15 @@ function app() {
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    progress: [0.63, 0.49, 0.26, 0.2, 0.25],
-    speed: [63 * 1, 49 * 1, 26 * 1, 20 * 1, 25 * 1],
+    progress: [0.65, 0.49, 0.26, 0.2, 0.25],
+    speed: [65 * 1, 49 * 1, 26 * 1, 20 * 1, 25 * 1],
     text: [
-      'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, google analytics, tinypng, PWA, flex (almost all projects), grid, BS4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
-      'Vanilla, syntax of JSX(Babel) and Typescript(superset of JS), OOP, DRY, naming convention, all Data Types and all methods/properties, API, Algorithms(most knowledge based on C++) and algorithmic computational complexity (O, Ω, Θ), Data modeling. Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, Error handling, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), JSON, localStorage, application filesystem patterns,  ES8, await, async, ES6, arrow functions, date, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, reCAPTCHA, leaflet.js lib, (ProgressBar.js + myDOM.js + myAlert.js) libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
-      "Global, REST API, URL protocol, IP, Server Statuses, wrapper function, exports, require. mkdir, touch, cd. npm(moving project with dependencies)=>{npm install dependecie -g, npm link dependecie, init -y, npm install rimraf -g, rimraf node_modules, git push, git pull, npm install}, run. Gulp(task, watch, css-clean, concat, pipe). JSON, json-package config, git, heroku. Modules: Debugger, Error(methods), Path, FileSystem, Os, Url, Events, Net, Http(class Server all methods/events, eg. request (IncomingMessage), responde (ServerResponse), class ClientRequest). Framework: Express(set, get, locals, app.METHODS, server, app, Router (setting routes), use, send, redirect, sendFile, views, statics (documentation)). Currently study on server side + db. Currently working on: server side apps.",
+      'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, tinypng, PWA, UX basics, flex (almost all projects), grid, BS4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
+      'Vanilla, syntax of JSX(Babel) and Typescript(superset of JS), OOP, DRY, naming convention, all Data Types and all methods/properties, API, Algorithms(most knowledge based on C++) and algorithmic computational complexity (O, Ω, Θ). Data modeling. Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], strict mode, closures, Error handling, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), JSON, fetch, localStorage, application filesystem patterns.  ES8: await, async. ES6(good knowledge): arrow functions, date, Promise, this, bind, class, extends, modules, exports, require. jQuery lib, emailjs lib, reCAPTCHA, leaflet.js lib, (ProgressBar.js + myDOM.js + myAlert.js) libs(my own), google analytics and much more :). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/Phaser.',
+      "Global, REST API, URL protocol, IP, Server Statuses, wrapper function, exports, require. cmd: mkdir, touch, cd, c:, rem. npm(moving project with dependencies)=>{npm install dependecie -g, npm link dependecie, init -y, npm install rimraf -g, rimraf node_modules, git push, git pull, npm install}, run. Gulp(task, watch, css-clean, concat, pipe). JSON, json-package config, git, heroku. Modules: Debugger, Error(methods), Path, FileSystem, Os, Uuid, Url, Events, Net, Http(all classes/methods/events, eg. request (IncomingMessage), responde (ServerResponse)). Framework: Express(set, get, locals, app.METHODS, server, app, Router (setting routes), listen, end, write, use, send, redirect, sendFile, views, statics (documentation)). Currently study on server side + db and V8. Currently working on: server side apps + mongoDB.",
       "Babel -> JSX, state, prevState, props, React Dev Tool, Render, React, Fragment, extends React.Component, costructor? this : variables.",
-      'My first programming language :). All kind of data types (beside vector) and methods/properties, OOP, pointers, class, public, private, protected, inherit, algorithms(tree sort ,bubble sort, quick sort, binary search, merge sort), libs: iostream, string, cstdlib > windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
+      'My first programming language :). All kind of data types (beside vector) and methods/properties, OOP, pointers, class, public, private, protected, inherit, polymorphism, algorithms(tree sort ,bubble sort, quick sort, binary search, merge sort), libs: iostream, string, cstdlib > windows.h, conio.h, ctime, creating my own headers, SDL2. C++ builder. I created: 1) turn-based strategy, text game. 2) coverter app for units of measurement. Much more small projects for learning. Books I have read: "The C++ Programming Language, 4th Edition"'
     ]
-
   };
 
   const myDOM = {
@@ -179,7 +178,7 @@ function app() {
         emailjs
           .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
           .then(
-            (response) => {
+            response => {
               // console.log(response)
               myAlert("Message has been sent");
               grecaptcha.reset();
@@ -191,7 +190,7 @@ function app() {
                 }
               }
             },
-            (error) => {
+            error => {
               let alertString;
               if (error.status == 400) {
                 alertString = "Verification by reCAPTCHA is needed !";
@@ -202,7 +201,6 @@ function app() {
             }
           );
         // clean inputs values
-
       } else myAlert("Please fill out all form positions");
     },
 
@@ -337,7 +335,6 @@ function app() {
     myDOM.createProgressCircles();
 
     myDOM.listen();
-
   };
   init();
 
