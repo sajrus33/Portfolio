@@ -15,8 +15,8 @@ function app() {
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    progress: [0.7, 0.52, 0.25, 0.2, 0.25],
-    speed: [70 * 1, 52 * 1, 25 * 1, 20 * 1, 25 * 1],
+    progress: [0.63, 0.49, 0.26, 0.2, 0.25],
+    speed: [63 * 1, 49 * 1, 26 * 1, 20 * 1, 25 * 1],
     text: [
       'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, google analytics, tinypng, PWA, flex (almost all projects), grid, BS4, Old tehchnologies (inline-block, float-left etc.). I am using for testing: HTML Validator, lighthouse audits and gtmetrix history. Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on BS4/SCSS.',
       'Vanilla, syntax of JSX(Babel) and Typescript(superset of JS), OOP, DRY, naming convention, all Data Types and all methods/properties, API, Algorithms(most knowledge based on C++) and algorithmic computational complexity (O, Ω, Θ), Data modeling. Window, navigator, history, DOMTokenList, DOM + manipulation, Nodelist, [...res], closures, Error handling, constructor, prototype, __proto__ chains, settter/getter, canvas context drawing(games and effects), JSON, localStorage, application filesystem patterns,  ES8, await, async, ES6, arrow functions, date, Promise, this, bind, class, extends, modules, exports, require, jquery lib, emailjs lib, reCAPTCHA, leaflet.js lib, (ProgressBar.js + myDOM.js + myAlert.js) libs(my own). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/React.',
