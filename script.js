@@ -98,7 +98,7 @@ function app() {
     },
 
     // FUNCTIONS
-    createProgressCircles: function() {
+    createProgressCircles: function () {
       myDOM.progressCanvases.forEach((circle, i) => {
         myObjects.circles.push(
           new ProgresCircle(
@@ -125,7 +125,7 @@ function app() {
       });
     },
 
-    scrollTo: function(target = myDOM.header, duration = 200) {
+    scrollTo: function (target = myDOM.header, duration = 200) {
       myDOM.paralax.style.animation = "fadeOut .1s forwards";
 
       const targetPosition = target.offsetTop; //top of target
@@ -312,13 +312,13 @@ function app() {
         iframe.style.backgroundImage = "url('" + myDOM.iframes.imgs[i] + "')";
       });
 
-      myDOM.mailForm.submit.addEventListener("click", function() {
+      myDOM.mailForm.submit.addEventListener("click", function () {
         event.preventDefault();
         myDOM.sendEmail();
       });
 
       //            click event for copy email button in footer
-      myDOM.footerBtn.addEventListener("click", function() {
+      myDOM.footerBtn.addEventListener("click", function () {
         myDOM.footerEmail.value = mySetUp.myEmail;
         myDOM.footerEmail.focus();
 
