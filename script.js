@@ -85,7 +85,7 @@ function app() {
     iframes: {
       imgs: [
         "img/game-tower.png",
-        "img/web-portfolio.png",
+        "img/web-avangarde.png",
         "img/app-todo.png",
         "img/game-memory.png",
         "img/app-maps.png",
