@@ -280,15 +280,14 @@ function app() {
             if (i !== index) {
               circle.classList.toggle("displayNone");
             }
-          })
-            ;
+          });
 
           myDOM.progressDescribe.classList.toggle("displayNone");
           setTimeout(() => {
             myDOM.progressDescribe.classList.toggle(
               "progress__describe--runIn"
             );
-          } 10);
+          }, 10);
 
           if (mySetUp.text[i]) {
             myDOM.progressDescribe.innerText = "";
