@@ -151,14 +151,14 @@ function app() {
       requestAnimationFrame(animation);
     },
 
-    sendEmail: async () => {
+    sendEmail: () => {
       const number = myDOM.mailForm.number.value;
       const name = myDOM.mailForm.name.value;
       const email = myDOM.mailForm.email.value;
       const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
-        await grecaptcha.execute();
+        grecaptcha.execute();
         //  creating new message from inputs values
         const newMessage = {
           replay_to: String(number),
