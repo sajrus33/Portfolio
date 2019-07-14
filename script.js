@@ -158,48 +158,43 @@ function app() {
       const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
-        new Promise((resolve, reject) => {
-          grecaptcha.execute();
-        }).then(() => {
-          //  creating new message from inputs values
-          const newMessage = {
-            replay_to: String(number),
-            from_name: String(name) + " " + String(email),
-            to_name: mySetUp.myName,
-            message_html: String(message)
-          };
-          // send email with emailjs
-          emailjs
-            .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
-            .then(
-              response => {
-                // console.log(response)
-                myAlert("Message has been sent");
-                grecaptcha.reset();
-                for (let property in myDOM.mailForm) {
-                  if (myDOM.mailForm.hasOwnProperty(property)) {
-                    if (property !== "submit") {
-                      myDOM.mailForm[property].value = "";
-                    }
+
+        //  creating new message from inputs values
+        const newMessage = {
+          replay_to: String(number),
+          from_name: String(name) + " " + String(email),
+          to_name: mySetUp.myName,
+          message_html: String(message)
+        };
+        // send email with emailjs
+        emailjs
+          .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
+          .then(
+            response => {
+              // console.log(response)
+              myAlert("Message has been sent");
+              grecaptcha.reset();
+              for (let property in myDOM.mailForm) {
+                if (myDOM.mailForm.hasOwnProperty(property)) {
+                  if (property !== "submit") {
+                    myDOM.mailForm[property].value = "";
                   }
-
                 }
 
-              },
-
-              error => {
-                let alertString;
-                if (error.status == 400) {
-                  alertString = "Verification by reCAPTCHA is needed !";
-                } else {
-                  alertString = "We are sorry, automatic mailbox is full !";
-                }
-                myAlert(alertString);
               }
-            );
-        });
 
+            },
 
+            error => {
+              let alertString;
+              if (error.status == 400) {
+                alertString = "Verification by reCAPTCHA is needed !";
+              } else {
+                alertString = "We are sorry, automatic mailbox is full !";
+              }
+              myAlert(alertString);
+            }
+          );
         // clean inputs values
       } else myAlert("Please fill out all form positions");
     },
