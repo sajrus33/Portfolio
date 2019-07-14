@@ -158,7 +158,6 @@ function app() {
       const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
-        grecaptcha.execute();
         //  creating new message from inputs values
         const newMessage = {
           replay_to: String(number),
@@ -324,8 +323,9 @@ function app() {
   const init = () => {
     myDOM.reSize();
     emailjs.init("user_tdJP5pQdemG5AhJpq5J7O");
-    myDOM.createProgressCircles();
-
+    grecaptcha.execute(); 
+  myDOM.createProgressCircles();
+    
     myDOM.listen();
   };
   init();
