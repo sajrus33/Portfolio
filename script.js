@@ -158,39 +158,48 @@ function app() {
       const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
-        //  creating new message from inputs values
-        const newMessage = {
-          replay_to: String(number),
-          from_name: String(name) + " " + String(email),
-          to_name: mySetUp.myName,
-          message_html: String(message)
-        };
-        // send email with emailjs
-        emailjs
-          .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
-          .then(
-            response => {
-              // console.log(response)
-              myAlert("Message has been sent");
-              grecaptcha.reset();
-              for (let property in myDOM.mailForm) {
-                if (myDOM.mailForm.hasOwnProperty(property)) {
-                  if (property !== "submit") {
-                    myDOM.mailForm[property].value = "";
+        new Promise((resolve, reject) => {
+          grecaptcha.execute();
+        }).then(() => {
+          //  creating new message from inputs values
+          const newMessage = {
+            replay_to: String(number),
+            from_name: String(name) + " " + String(email),
+            to_name: mySetUp.myName,
+            message_html: String(message)
+          };
+          // send email with emailjs
+          emailjs
+            .send("brianwala22_gmail_com", "template_gqc9FdOP", newMessage)
+            .then(
+              response => {
+                // console.log(response)
+                myAlert("Message has been sent");
+                grecaptcha.reset();
+                for (let property in myDOM.mailForm) {
+                  if (myDOM.mailForm.hasOwnProperty(property)) {
+                    if (property !== "submit") {
+                      myDOM.mailForm[property].value = "";
+                    }
                   }
+
                 }
+
+              },
+
+              error => {
+                let alertString;
+                if (error.status == 400) {
+                  alertString = "Verification by reCAPTCHA is needed !";
+                } else {
+                  alertString = "We are sorry, automatic mailbox is full !";
+                }
+                myAlert(alertString);
               }
-            },
-            error => {
-              let alertString;
-              if (error.status == 400) {
-                alertString = "Verification by reCAPTCHA is needed !";
-              } else {
-                alertString = "We are sorry, automatic mailbox is full !";
-              }
-              myAlert(alertString);
-            }
-          );
+            );
+        });
+
+
         // clean inputs values
       } else myAlert("Please fill out all form positions");
     },
@@ -271,14 +280,15 @@ function app() {
             if (i !== index) {
               circle.classList.toggle("displayNone");
             }
-          });
+          })
+            ;
 
           myDOM.progressDescribe.classList.toggle("displayNone");
           setTimeout(() => {
             myDOM.progressDescribe.classList.toggle(
               "progress__describe--runIn"
             );
-          }, 10);
+          } 10);
 
           if (mySetUp.text[i]) {
             myDOM.progressDescribe.innerText = "";
@@ -323,15 +333,14 @@ function app() {
   const init = () => {
     myDOM.reSize();
     emailjs.init("user_tdJP5pQdemG5AhJpq5J7O");
-    grecaptcha.execute(); 
-  myDOM.createProgressCircles();
-    
+    myDOM.createProgressCircles();
+
     myDOM.listen();
   };
   init();
 
   /*
-    1
-    $ npm install emailjs-com --save
-     */
+  1
+  $ npm install emailjs-com --save
+   */
 }
