@@ -112,15 +112,6 @@ function app() {
             1
           )
         );
-        //   circle,
-        //   mySetUp.speed[i],
-        //   mySetUp.progress[i],
-        //   0.15,
-        //   "rgba(252,198,38,1)",
-        //   "white",
-        //   "bold calc(2.6vw + 2.6vh) Open Sans",
-        //   1
-        // );
         myObjects.circles[i].init();
       });
     },
@@ -167,6 +158,7 @@ function app() {
       const message = myDOM.mailForm.message.value;
 
       if (number && email && message && name) {
+        grecaptcha.execute();
         //  creating new message from inputs values
         const newMessage = {
           replay_to: String(number),
