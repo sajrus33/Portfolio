@@ -75,12 +75,7 @@ function app() {
       submit: document.querySelector(".footer__submit")
     },
 
-    //   "https://sajrus33.github.io/game-tower-defence/",
-    //   "https://sajrus33.github.io/lib-progress-circles/",
-    //   "https://sajrus33.github.io/app-todo/",
-    //   "https://sajrus33.github.io/game-memory-cards/",
-    //   "https://sajrus33.github.io/app-maps/",
-    //   "https://sajrus33.github.io/web-flubmaster/"
+
     // IFRAMES
     iframes: {
       imgs: [
@@ -232,6 +227,8 @@ function app() {
       myDOM.headerBtn.addEventListener("click", () => {
         const scrollTime = myDOM.footer.offsetTop / 2;
         myDOM.scrollTo(myDOM.footer, scrollTime);
+        console.log(myDOM.footer.offsetTop);
+        // window.scrollTo({ top: myDOM.footer.offsetTop, behavior: "smooth" })
       });
 
       //            main NAV  && hamburger nav  links"on clicks"
