@@ -15,10 +15,10 @@ function app() {
     myName: "Brian",
     myEmail: "brianwala22@gmail.com",
     // progress
-    progress: [0.65, 0.49, 0.70, 0.2, 0.30],
-    speed: [65 * 1, 49 * 1, 70 * 1, 20 * 1, 30 * 1],
+    progress: [0.70, 0.75, 0.65, 0.3, 0.15],
+    speed: [70 * 1, 75 * 1, 65 * 1, 30 * 1, 15 * 1],
     text: [
-      'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, tinypng, PWA, UX basics, flex, grid, Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on Python + TensorFlow :D.',
+      'HTML5 STANDARDS, BEM, SEMANTIC TAGS, SEO, tinypng, PWA, og protocol, UX basics, flex, grid, Books I have read: "Advanced Game Design with HTML5 and JavaScript". I am currently studing on Python + TensorFlow :D.',
       'Vanilla, JSX, Typescript, OOP, DRY, all Data Types and all methods/properties, Algorithms(most knowledge based on C++) and algorithmic computational complexity (O, Ω, Θ). Data modeling. navigator, history, DOM + manipulation, prototype, settter/getter, canvas context drawing(games and effects), localStorage, application filesystem patterns.  ES8 and ES6(good knowledge) Promises, try catch block, emailjs, lodash, axios, reCAPTCHA, leaflet.js, google analytics and much more :). Books I have read: "Advanced Game Design with HTML5 and JavaScript". Currently learning: Node.js/Phaser.',
       'Node 12.*, my own email-checker, express, body-parser, dotenv, helmet, @hapi/joi, aws-sdk, bcrypt, cookie-parser, cors, express-joi-validation, jsonwebtoken, knex, multer, multer-s3, pg, twilio, reCaptcha, nodemailer, mailjet',
       'React 16.7 and 16.8 (Hooks), MUI, react-redux, Next.js, next-routes, redux-form, react-material-ui-form-validator, react-draggable, react-image-crop, react-map-gl, react-notification-system, react-google-recaptcha, prop-types',
